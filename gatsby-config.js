@@ -1,9 +1,17 @@
+const path = require('path');
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Biuro w Kamienicy',
   },
-  plugins: [
-    'gatsby-plugin-resolve-src',
+  plugins: [{
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        pages: path.join(__dirname, 'src/pages'),
+        components: path.join(__dirname, 'src/components'),
+        scss: path.join(__dirname, 'src/scss'),
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,6 +34,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-sass'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
