@@ -12,13 +12,16 @@ const OfficeDetails = (props) => {
     value : '1300 (netto)',
     unit : 'zł'
   },{
+    label : 'ulica',
+    value : 'Sądowa',
+  },{
+    label : 'piętro',
+    value : '1',
+  },{
+    label : 'szybki internet',
+    value : 'tak'
+  },{
     label : 'kącik socialny',
-    value : 'tak'
-  },{
-    label : 'sala spotkań',
-    value : 'tak'
-  },{
-    label : 'monitoring',
     value : 'tak'
   }]
   return (
