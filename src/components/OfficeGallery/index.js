@@ -8,10 +8,10 @@ const OfficeGallery = (props) => {
     <React.Fragment>
       <MainPhoto/>
       
-      <div class="btn-group d-flex" role="group" aria-label="Basic example">
-        <button type="button" class="flex-fill btn btn-secondary ">Poprzednie biuro</button>
-        <button type="button" class="flex-fill btn btn-light">Zobacz wszystkie</button>
-        <button type="button" class="flex-fill btn btn-secondary">Następnę biuro</button>
+      <div className="btn-group d-flex" role="group" aria-label="Basic example">
+        <button type="button" className="flex-fill btn btn-secondary ">Poprzednie biuro</button>
+        <button type="button" className="flex-fill btn btn-light">Zobacz wszystkie</button>
+        <button type="button" className="flex-fill btn btn-secondary">Następnę biuro</button>
       </div>
     </React.Fragment>
   )

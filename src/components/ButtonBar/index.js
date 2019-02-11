@@ -9,7 +9,7 @@ const StyledBar = styled.div`
 const ButtonBar = (props) => {
   return (
     <StyledBar>  
-      <div className="container p-3">
+      <div className="container p-3 text-center">
         Biuro w Kamienicy © Wszelkie prawa zastrzeżone
       </div>
     </StyledBar>

@@ -5,13 +5,13 @@ import ImagePlaceHolder from 'components/UI/ImagePlaceHolder';
 const Feature = ({title, text}) => {
   return (
     <div className="card">
-      <div class="card-body d-flex align-items-center">
+      <div className="card-body d-flex align-items-center">
         <div className="p-3">
           <ImagePlaceHolder className="card-img-right" height={100} width={100}/>
         </div>
         <div >
-          <h5 class="card-title">{title}</h5>
-           <p class="card-text">{text}</p>
+          <h5 className="card-title">{title}</h5>
+           <p className="card-text">{text}</p>
         </div>
       </div>
     </div>

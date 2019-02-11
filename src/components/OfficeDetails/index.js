@@ -26,9 +26,9 @@ const OfficeDetails = (props) => {
   }]
   return (
     <React.Fragment>
-      <ul class="list-group flex-grow-1 text-dark">
-        {data.map(({label, value, unit}) => (
-            <li class="list-group-item">
+      <ul className="list-group flex-grow-1 text-dark">
+        {data.map(({label, value, unit}, i) => (
+            <li className="list-group-item" key={i}>
               <span className="text-muted">{label}:</span>{' '}
               {value}
               <em>{unit}</em>
@@ -36,7 +36,7 @@ const OfficeDetails = (props) => {
         ))}
         
       </ul>
-      <button type="button" className="btn btn-block btn-primary">Wynajmij</button>
+      <button type="button" className="btn btn-block btn-primary btn-lg">Wynajmij</button>
     </React.Fragment>
   )
 }

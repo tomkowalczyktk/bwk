@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const Header = () => (
  
   <header>
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+     <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <a className="navbar-brand" href="#">BWK</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -16,12 +16,12 @@ const Header = () => (
               <a className="nav-link" href="#">Biura</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Dlaczego my</a>
+              <a className="nav-link" href="#">Korzyści</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Coworking dla prawników</a>
+              <a className="nav-link" href="#">Referencje</a>
             </li>
-          
+
             <li className="nav-item">
               <a className="nav-link" href="#">Kontakt</a>
             </li>
