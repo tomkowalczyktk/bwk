@@ -1,34 +1,21 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import './header.scss';
+const Header = (props) => {
+  return (
+    <header className="header">
+      <Link to="/"><h1>Biuro w kamienicy</h1></Link>
+      <ul>
+        <li><Link to="/oferty">oferty</Link></li>
+      </ul>
+    </header>
+  );
+}
 
-const Header = () => (
- 
-  <header>
-     <nav className="navbar navbar-expand-sm navbar-light bg-light">
-        <a className="navbar-brand" href="#">BWK</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+// Specifies types for props:
+Header.propTypes = {
+  
+};
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Biura</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Korzyści</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Referencje</a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  </header>
-)
-
-export default Header
+export default Header;
