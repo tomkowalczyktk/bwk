@@ -1,3 +1,11 @@
+import local from './images/library.png';
+// import mug from './images/mug.png';
+// import wifi from './images/rss.png';
+// import snow from './images/svg.png';
+
+
+
+
 export const offers = [{
   "id": 1,
   "content": "BIuro na Sądowej"
@@ -8,7 +16,7 @@ export const offers = [{
 export const advantages = [
   {
     "id": 1,
-    "icon": "",
+    "icon": local,
     "title": "Prestiżowa lokalizacja",
     "content": "Biura i lokale położone w wiekowej, nowoczesnie odnowionej kamienicy"
   },
