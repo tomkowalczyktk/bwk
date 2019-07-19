@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import logo from '../../images/logo.png';
 import './header.scss';
 const Header = (props) => {
   return (
     <header className="header">
-      <Link to="/"><h1>Biuro w kamienicy</h1></Link>
+      <Link to="/"><img src={logo} className="header__logo" alt=" Logo " /></Link>
       <ul>
-        <li><Link to="/oferty">oferty</Link></li>
+        <li><Link to="/oferty">Biura</Link></li>
+        <li><Link to="/advantages">Korzyści</Link></li>
+        <li><Link to="/oferty">Referencje</Link></li>
+        <li><Link to="/oferty">Kontakt</Link></li>
       </ul>
     </header>
   );
@@ -15,7 +19,7 @@ const Header = (props) => {
 
 // Specifies types for props:
 Header.propTypes = {
-  
+
 };
 
 export default Header;
