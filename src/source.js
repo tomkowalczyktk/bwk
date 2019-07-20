@@ -1,7 +1,7 @@
 import local from './images/library.png';
-// import mug from './images/mug.png';
-// import wifi from './images/rss.png';
-// import snow from './images/svg.png';
+import mug from './images/mug.png';
+import wifi from './images/rss.png';
+import snow from './images/svg.png';
 
 
 
@@ -22,19 +22,19 @@ export const advantages = [
   },
   {
     "id": 2,
-    "icon": "",
+    "icon": snow,
     "title": "Klimatyzacja",
     "content": "Każde pomieszczenie wyposażone jest w klimatyzację"
   },
   {
     "id": 3,
-    "icon": "",
+    "icon": mug,
     "title": "Kącik socjalny",
     "content": "Wspólne pomieszczenie wyposażone w ekspres do kawy, czajnik, mikrofalówkę"
   },
   {
     "id": 4,
-    "icon": "",
+    "icon": wifi,
     "title": "Szybki internet",
     "content": "Internet wi-fi dostępny we wszystkich biurach w cenie wynajmu"
   }

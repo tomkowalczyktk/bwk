@@ -17,4 +17,4 @@ const AdvantagePage = () => (
     ))}
   </main>
 );
-export default AdvantagePage
+// export default AdvantagePage
