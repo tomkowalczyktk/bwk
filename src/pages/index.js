@@ -1,7 +1,7 @@
 import React from 'react';
-import '../fonts/BentonSans Regular.ttf';
-import '../fonts/BentonSans Light.ttf';
-import '../fonts/BentonSans Thin.ttf';
+import '../fonts/BentonSansRegular.ttf';
+import '../fonts/BentonSansLight.ttf';
+import '../fonts/BentonSansThin.ttf';
 import Header from '../components/Header';
 import 'scss/bwk.scss'
 // import { offers } from '../source';
