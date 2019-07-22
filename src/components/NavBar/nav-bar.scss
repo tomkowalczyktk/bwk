@@ -1,0 +1,21 @@
+.nav-bar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  top: 2rem;
+  right: 10rem;
+
+  &__item {
+    margin: 0;
+    padding: 1rem;
+    a {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}

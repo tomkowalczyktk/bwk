@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import logo from '../../images/logo.png';
 import './header.scss';
-const Header = (props) => {
+const Header = ({ children }) => {
   return (
     <header className="header">
       <Link to="/"><img src={logo} className="header__logo" alt=" Logo " /></Link>
@@ -13,10 +13,9 @@ const Header = (props) => {
         <li className="header__nav-bar__item"><Link to="/oferty">Referencje</Link></li>
         <li className="header__nav-bar__item"><Link to="/oferty">Kontakt</Link></li>
       </ul>
-      <h1 className="header__text">Udogonienia biurowca w prestiżowej kamienicy w centrum miasta.</h1>
-      <div className="header__button">
-        <Link to="/">Wynajmij biuro</Link>
-      </div>
+
+      {children}
+
     </header>
   );
 }

@@ -1,10 +1,19 @@
-
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
-
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@font-face {
+  font-family: "BentonSans";
+  src: local("BentonSans"), url("../fonts/BentonSansRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BentonSans";
+  src: local("BentonSans-Light"), url("../fonts/BentonSansLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BentonSans";
+  src: local("BentonSans-Thin"), url("../fonts/BentonSansThin.ttf") format("truetype");
+}
 
 html,
 body {
   height: 100%;
   width: 100%;
 }
-
