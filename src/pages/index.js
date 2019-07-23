@@ -9,7 +9,7 @@ import internet from '../images/icon-internet.png';
 
 const IndexPage = () => (
   <main>
-
+    <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
     <div className='container'>
       <div className="container">
         <Headline title="Korzyści" />
