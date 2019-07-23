@@ -6,3 +6,13 @@ body {
   width: 100%;
   font-family: benton-sans;
 }
+.container {
+  margin: auto;
+  padding: 0 15px;
+  max-width: 1350px;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}

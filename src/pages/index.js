@@ -42,43 +42,49 @@ const IndexPage = () => (
 
     <h2>home</h2>
     {/* <AdvantageSection /> */}
-    <Headline title="Korzyści" />
-    <div className="advantage-section">
-      <Advantage
-        icon={location}
-        title="Prestiżowa lokalizacja"
-        content="Biura i lokale położone w wiekowej, nowoczesnie odnowionej kamienicy"
+    <div className="container">
+      <Headline title="Korzyści" />
+      <div className="advantage-section">
+        <Advantage
+          icon={location}
+          title="Prestiżowa lokalizacja"
+          content="Biura i lokale położone w wiekowej, nowoczesnie odnowionej kamienicy"
+        />
+        <Advantage
+          icon={aircon}
+          title="Klimatyzacja"
+          content="Każde pomieszczenie wyposażone jest w klimatyzację"
+        />
+        <Advantage
+          icon={coffee}
+          title="Kącik socjalny"
+          content="Wspólne pomieszczenie wyposażone w ekspres do kawy, czajnik, mikrofalówkę"
+        />
+        <Advantage
+          icon={internet}
+          title="Szybki internet"
+          content="Internet wi-fi dostępny we wszystkich biurach w cenie wynajmu"
+        />
+      </div>
+    </div>
+    <div className="container">
+      <Headline title="Biura" />
+      <Offices />
+    </div>
+    <div className="container">
+      <Headline title="Referencje" />
+      <Testimonial
+        img='#'
+        author='Zbyszek'
+        content='Bardzo fajne biuro, profesjonalna obsługa, super lokalizacja'
+
       />
-      <Advantage
-        icon={aircon}
-        title="Klimatyzacja"
-        content="Każde pomieszczenie wyposażone jest w klimatyzację"
-      />
-      <Advantage
-        icon={coffee}
-        title="Kącik socjalny"
-        content="Wspólne pomieszczenie wyposażone w ekspres do kawy, czajnik, mikrofalówkę"
-      />
-      <Advantage
-        icon={internet}
-        title="Szybki internet"
-        content="Internet wi-fi dostępny we wszystkich biurach w cenie wynajmu"
+      <Testimonial
+        img='#'
+        author='Magdalena'
+        content='Bardzo fajne biuro, profesjonalna obsługa, super lokalizacja'
       />
     </div>
-    <Headline title="Biura" />
-    <Offices />
-    <Headline title="Referencje" />
-    <Testimonial
-      img='#'
-      author='Zbyszek'
-      content='Bardzo fajne biuro, profesjonalna obsługa, super lokalizacja'
-
-    />
-    <Testimonial
-      img='#'
-      author='Magdalena'
-      content='Bardzo fajne biuro, profesjonalna obsługa, super lokalizacja'
-    />
     {/* <Footer /> */}
   </main >
 );
