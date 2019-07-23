@@ -1,14 +1,15 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
 @font-face {
   font-family: "BentonSans";
-  src: local("BentonSans"), url("../fonts/BentonSansRegular.ttf") format("truetype");
+  src: local("BentonSans-Regular"), url("../fonts/BentonSansRegular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "BentonSans";
+  font-family: "BentonSans-Light";
   src: local("BentonSans-Light"), url("../fonts/BentonSansLight.ttf") format("truetype");
 }
 @font-face {
-  font-family: "BentonSans";
+  font-family: "BentonSans-thin";
   src: local("BentonSans-Thin"), url("../fonts/BentonSansThin.ttf") format("truetype");
 }
 

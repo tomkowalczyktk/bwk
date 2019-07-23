@@ -1,12 +1,17 @@
 .header {
   background-color: rgb(36, 33, 33);
-  font-family: BentonSans;
-  margin: 2rem 10rem;
+  // font-family: BentonSans-Regular;
+  width: 100%;
+  margin: 0;
   padding: 0;
   background-image: url("../../images/header_background_image_home.png");
   background-repeat: no-repeat;
   top: 0;
   left: 0;
+
+  &__logo {
+    margin: 2rem 10rem;
+  }
 
   &__nav-bar {
     margin: 0;
@@ -26,35 +31,8 @@
         text-decoration: none;
         color: white;
         font-size: 1.2rem;
+        // font-family: BentonSans-Regular;
       }
-    }
-  }
-  &__text {
-    margin: 0 auto;
-    padding: 12rem 0 2rem 0;
-    width: 40%;
-    font-size: 2.5rem;
-    text-align: center;
-    color: white;
-  }
-  &__button {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-
-    a {
-      margin: 0px auto 300px auto;
-      padding: 0.7rem;
-      display: block;
-      border: 3px solid white;
-      border-radius: 3px;
-      width: 280px;
-      color: white;
-      font-size: 1.2rem;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
     }
   }
 }

@@ -17,8 +17,8 @@ import Headline from '../components/Headline/Headline';
 import Offices from '../components/Offices/Offices';
 import Testimonial from '../components/Testimonial/Testimonial';
 import Footer from '../components/Footer/Footer';
-import { Link } from 'gatsby'
 import HeaderButton from '../components/HeaderButton';
+import '../fonts/BentonSansRegular.ttf';
 
 const IndexPage = () => (
   <main>
