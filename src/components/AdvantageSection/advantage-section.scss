@@ -1,0 +1,11 @@
+.advantage-section {
+  margin: 0 100px;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  @media all and(max-width:1000px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}
