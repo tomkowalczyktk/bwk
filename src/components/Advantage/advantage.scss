@@ -5,6 +5,10 @@
   font-family: benton-sans, sans-serif;
   font-style: normal;
   font-weight: 300;
+  @media all and(max-width:1000px) {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
   &__icon {
     margin: 0 auto;
     padding: 0;
