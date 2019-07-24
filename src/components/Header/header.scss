@@ -5,56 +5,65 @@
   padding: 0;
   background-image: url("../../images/header_background_image_home.png");
   background-repeat: no-repeat;
-  top: 0;
-  left: 0;
+  background-position: top left;
 
-  .container {
-    position: relative;
-  }
-  &__logo {
-    margin: 42px 0px;
-    @media all and(max-width:1350px) {
-      margin: 42px 42px;
+  .container--header {
+    padding-bottom: 350px;
+    @media all and(max-width:800px) {
+      padding-bottom: 100px;
     }
   }
-  &__burger {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 42px;
-    right: 21px;
-    display: none;
-    @media all and(max-width:1350px) {
-      display: inline-block;
-    }
-  }
-  &__nav-bar {
-    margin: 0;
-    padding: 0;
+  &__top {
+    padding: 42px 0px;
     display: flex;
-    list-style: none;
-    position: absolute;
-    top: 42px;
-    right: 0;
-
-    @media all and(max-width:1350px) {
-      display: none;
+    align-content: center;
+    @media all and(max-width:800px) {
+      padding: 21px 0;
     }
 
-    &__item {
-      margin: 0;
-      padding: 21px;
-      a {
+    &__logo {
+      flex-grow: 0;
+    }
+    &__nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .header-nav-bar {
         margin: 0;
         padding: 0;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        font-family: benton-sans;
+        display: flex;
+        list-style: none;
 
-        &:hover {
-          text-decoration: none;
-          color: white;
+        @media all and(max-width:800px) {
+          display: none;
+        }
+
+        &__item {
+          margin: 0;
+          padding: 21px;
+          a {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: benton-sans;
+
+            &:hover {
+              text-decoration: none;
+              color: darken($color: white, $amount: 20);
+            }
+          }
+        }
+      }
+      &__burger {
+        width: 48px;
+        height: 48px;
+        display: none;
+        @media all and(max-width:800px) {
+          display: block;
         }
       }
     }

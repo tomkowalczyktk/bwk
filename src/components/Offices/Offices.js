@@ -1,7 +1,6 @@
 import React from 'react';
 import './offices.scss';
 import { Link } from 'gatsby';
-// import { Image } from 'gatsby-image';
 
 const Offices = () => {
   return (
@@ -17,7 +16,6 @@ const Offices = () => {
 
       <div className='offices__presentation'>
         <div className='presentation__img'>
-          {/* <Image /> */}
         </div>
         <div className='presentation__desc'>
           <div className='presentation__desc__indicator'>
@@ -60,7 +58,7 @@ const Offices = () => {
             <p className='presentation__desc__col-r__values'></p>
             <p className='presentation__desc__col-r__values'></p>
             <p className='presentation__desc__col-r__values'></p>
-            <Link className="resentation__desc__button-botom resentation__desc__button-botom--r">
+            <Link className="presentation__desc__button-botom resentation__desc__button-botom--r">
               Wszystkie biura
             </Link>
           </div>

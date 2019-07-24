@@ -1,10 +1,10 @@
 import React from 'react';
 import './header-headline.scss';
 
-const HeaderHeadline = (props) => {
+const HeaderHeadline = ({ text }) => {
   return (
     <h1 className="header-headline">
-      {props.text}
+      {text}
     </h1>
   );
 }

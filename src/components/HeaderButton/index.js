@@ -3,10 +3,13 @@ import './header-button.scss';
 import { Link } from 'gatsby';
 
 
-const HeaderButton = (props) => {
+const HeaderButton = ({ image, text }) => {
   return (
-    < div className="header-button">
-      <Link to="/"><img src={props.image}></img>{props.text}</Link>
+    <div className="header-button-row">
+      <Link className="header-button" to="/">
+        <img src={image}></img>
+        {text}
+      </Link>
     </div>
   );
 }
