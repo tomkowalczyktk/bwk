@@ -1,0 +1,12 @@
+.header-headline {
+  margin: 0 auto;
+  padding: 315px 0 42px 0;
+  width: 50%;
+  font-size: 38px;
+  text-align: center;
+  color: white;
+  @media all and(max-width:900px) {
+    width: 100%;
+    padding-top: 100px;
+  }
+}
