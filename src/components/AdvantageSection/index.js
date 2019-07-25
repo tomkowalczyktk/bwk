@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './advantage-section.scss';
 import location from '../../images/icon-location.png';
 import aircon from '../../images/icon-aircon.png';
@@ -7,7 +6,7 @@ import coffee from '../../images/icon-coffee.png';
 import internet from '../../images/icon-internet.png';
 import Advantage from '../Advantage';
 
-const AdvantageSection = (props) => {
+const AdvantageSection = () => {
   return (
 
     <div className="advantage-section">
@@ -36,9 +35,6 @@ const AdvantageSection = (props) => {
   );
 }
 
-// Specifies types for props:
-Advantage.propTypes = {
 
-};
 
 export default AdvantageSection;
