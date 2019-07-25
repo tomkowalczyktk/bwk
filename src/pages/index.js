@@ -12,6 +12,7 @@ const IndexPage = () => (
   <main>
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
     <div className='container'>
+      <a name="advantages"></a>
       <div className="container">
         <Headline title="Korzyści" />
         <AdvantageSection />
