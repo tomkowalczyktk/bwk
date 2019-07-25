@@ -1,0 +1,15 @@
+.headline {
+  margin: 0;
+  padding: 2rem 0;
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 38px;
+    font-family: benton-sans, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+  }
+}

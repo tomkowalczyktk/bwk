@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from '../components/Header';
 import 'scss/bwk.scss'
+import Header from '../components/Header';
 import HeaderHeadline from '../components/HeaderHeadline';
 import HeaderButton from '../components/HeaderButton';
 import keyImage from '../images/key.png';
+import Headline from '../components/Headline';
+import AdvantageSection from '../components/AdvantageSection';
 
 
 const IndexPage = () => (
   <main>
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
+
 
     <Header >
 
@@ -22,6 +25,17 @@ const IndexPage = () => (
 
     </Header>
 
-  </main >
+
+
+    <div className='container'>
+      <a name="advantages"></a>
+      <div className="container">
+        <Headline title="Korzyści" />
+        <AdvantageSection />
+      </div>
+    </div>
+
+  </main>
+
 );
 export default IndexPage
