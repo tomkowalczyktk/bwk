@@ -12,7 +12,7 @@ const Header = ({ children }) => {
           <div className="header__top__nav">
             <ul className="header-nav-bar">
               <li className="header-nav-bar__item"><Link to="/oferty">Biura</Link></li>
-              <li className="header-nav-bar__item"><Link to="/advantages">Korzyści</Link></li>
+              <li className="header-nav-bar__item"><Link to="advantages">Korzyści</Link></li>
               <li className="header-nav-bar__item"><Link to="/oferty">Kontakt</Link></li>
               <li className="header-nav-bar__item"><Link to="/oferty">Referencje</Link></li>
             </ul>
