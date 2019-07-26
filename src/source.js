@@ -11,7 +11,8 @@ export const offers = [
   {
     "id": 1,
     "street": "Sądowa",
-    "image": [{ sadowa }, { sadowa2 }],
+    "mainPhoto": sadowa,
+    "photos": [sadowa, sadowa2],
     "area": "20",
     "price": "1300",
     "floor": "1",
@@ -21,7 +22,8 @@ export const offers = [
   {
     "id": 2,
     "street": "Chopina",
-    "image": [{ chopina }],
+    "mainPhoto": chopina,
+    "photos": [chopina],
     "area": "20",
     "price": "1300",
     "floor": "1",
@@ -31,7 +33,8 @@ export const offers = [
   {
     "id": 3,
     "street": "Lipowa",
-    "image": [{ lipowa }],
+    "mainPhoto": lipowa,
+    "photos": [lipowa],
     "area": "20",
     "price": "1300",
     "floor": "1",
@@ -41,7 +44,8 @@ export const offers = [
   {
     "id": 4,
     "street": "Okopowa",
-    "image": [okopowa],
+    "mainPhoto": okopowa,
+    "photos": [okopowa],
     "area": "20",
     "price": "1300",
     "floor": "1",
