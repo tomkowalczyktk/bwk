@@ -11,28 +11,30 @@ class Testimonials extends React.Component {
     this.state = {
       testimonials: this.props.testimonials,
       start: 0,
-      end: (this.props.testimonials.length),
+      end: 2,
       step: 1
     }
 
-    this.SlideLeft = this.SlideLeft.bind(this);
-    this.SlideRight = this.SlideRight.bind(this);
+    this.slideLeft = this.slideLeft.bind(this);
+    this.slideRight = this.slideRight.bind(this);
   }
 
 
-  SlideLeft() {
+  slideLeft() {
     this.setState((prevState) => {
-      if (prevState.start === 0)
+      if (prevState.start < prevState.testimonials.length - prevState.step -1) {
+        
         return {
-          start: prevState.start + prevState.step
+          start: prevState.start + prevState.step,
+          end: prevState.end + prevState.step
         };
-      else {
+      } else {
         return null;
       }
     })
   }
 
-  SlideRight() {
+  slideRight() {
     return null
   }
 
@@ -41,7 +43,7 @@ class Testimonials extends React.Component {
     return (
       <div className='testimonials'>
 
-        <ArrowLeft onClick={this.SlideLeft} />
+        <ArrowLeft onClick={this.slideLeft} />
 
         {testimonials.slice(this.state.start, this.state.end).map(testimonial => (
           <Testimonial key={testimonial.id} className='testimonial__item'
@@ -49,7 +51,7 @@ class Testimonials extends React.Component {
           />
         ))}
 
-        <ArrowRight onClick={this.SlideRight} />
+        <ArrowRight onClick={this.slideRight} />
 
       </div>
     );
