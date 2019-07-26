@@ -22,26 +22,41 @@ class Testimonials extends React.Component {
 
   slideLeft() {
     this.setState((prevState) => {
-      if (prevState.start < prevState.testimonials.length - prevState.step -1) {
-        
+      if (prevState.start < prevState.testimonials.length - prevState.step - 1) {
         return {
           start: prevState.start + prevState.step,
           end: prevState.end + prevState.step
-        };
+        }
+
+
       } else {
+
         return null;
       }
     })
   }
 
   slideRight() {
-    return null
+    this.setState((prevState) => {
+      if (prevState.end < prevState.testimonials.length - 1 - prevState.step) {
+        return {
+          end: prevState.end + prevState.step,
+          start: prevState.start + prevState.step
+        }
+
+
+      } else {
+        return null;
+      }
+    })
   }
+
+
 
   render() {
     const { testimonials } = this.state;
     return (
-      <div className='testimonials'>
+      <div className='testimonials' >
 
         <ArrowLeft onClick={this.slideLeft} />
 
@@ -49,11 +64,12 @@ class Testimonials extends React.Component {
           <Testimonial key={testimonial.id} className='testimonial__item'
             {...testimonial}
           />
-        ))}
+        ))
+        }
 
-        <ArrowRight onClick={this.slideRight} />
+        < ArrowRight onClick={this.slideRight} />
 
-      </div>
+      </div >
     );
   }
 }
