@@ -7,7 +7,7 @@ const Header = ({ children }) => {
   return (
     <header className="header">
       <div className="container container--header">
-        <div class="header__top">
+        <div className="header__top">
           <Link to="/"><img src={logo} className="header__top__logo" alt=" Logo " /></Link>
           <div className="header__top__nav">
             <ul className="header-nav-bar">

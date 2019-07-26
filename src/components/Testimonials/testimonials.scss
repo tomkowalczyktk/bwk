@@ -1,0 +1,17 @@
+.testimonials {
+  margin: 0;
+  display: flex;
+  &__chevron {
+    margin: 50px 0 0 0;
+    svg {
+      height: 50px;
+      width: 50px;
+      fill: lighten($color: #000000, $amount: 10);
+    }
+  }
+  &__item {
+    margin: 0;
+    width: 40%;
+    display: block;
+  }
+}

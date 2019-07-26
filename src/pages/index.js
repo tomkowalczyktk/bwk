@@ -6,8 +6,10 @@ import HeaderButton from '../components/HeaderButton';
 import keyImage from '../images/key.png';
 import Headline from '../components/Headline';
 import AdvantageSection from '../components/AdvantageSection';
-import testimonials from '../source';
-console.log('testimonials', testimonials);
+import Testimonials from '../components/Testimonials';
+import { testimonials } from '../source';
+
+
 const IndexPage = () => (
   <main>
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
@@ -36,7 +38,8 @@ const IndexPage = () => (
     </div>
 
     <div className='container'>
-
+      <Headline title='Referencje' />
+      <Testimonials testimonials={testimonials} />
     </div>
 
 
