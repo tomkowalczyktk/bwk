@@ -38,10 +38,10 @@ class Testimonials extends React.Component {
 
   slideRight() {
     this.setState((prevState) => {
-      if (prevState.end < prevState.testimonials.length - 1 - prevState.step) {
+      if (prevState.end > prevState.testimonials.length - 1 - prevState.step) {
         return {
-          end: prevState.end + prevState.step,
-          start: prevState.start + prevState.step
+          end: prevState.end - prevState.step,
+          start: prevState.start - prevState.step
         }
 
 
