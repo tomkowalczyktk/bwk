@@ -4,8 +4,6 @@ import Testimonial from '../Testimonial';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 
-console.log("testi", testimonials.slice(0, testimonials.length));
-
 class Testimonials extends React.Component {
 
   constructor(props) {
@@ -26,10 +24,10 @@ class Testimonials extends React.Component {
     this.setState((prevState) => {
       if (prevState.start === 0)
         return {
-          start: prevState.start + step
+          start: prevState.start + prevState.step
         };
       else {
-        null;
+        return null;
       }
     })
   }
