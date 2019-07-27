@@ -11,7 +11,7 @@ class Testimonials extends React.Component {
     this.state = {
       testimonials: this.props.testimonials,
       start: 0,
-      end: 2,
+      end: 1,
       step: 1
     }
 
@@ -22,32 +22,38 @@ class Testimonials extends React.Component {
 
   slideLeft() {
     this.setState((prevState) => {
-      if (prevState.start < prevState.testimonials.length - prevState.step - 1) {
-        return {
-          start: prevState.start + prevState.step,
-          end: prevState.end + prevState.step
-        }
+      return {
 
+        start: (prevState.start > 0 && prevState.start <= prevState.testimonials.length - 1) ?
 
-      } else {
+          prevState.start - prevState.step : prevState.testimonials.length - 1
 
-        return null;
+        ,
+
+        end: (prevState.end > 0 && prevState.end <= prevState.testimonials.length - 1) ?
+
+          prevState.end - prevState.step : prevState.testimonials.length - 1
+
       }
     })
   }
 
   slideRight() {
     this.setState((prevState) => {
-      if (prevState.end > prevState.testimonials.length - 1 - prevState.step) {
-        return {
-          end: prevState.end - prevState.step,
-          start: prevState.start - prevState.step
-        }
+      return {
 
+        start: (prevState.start >= 0 && prevState.start < prevState.testimonials.length - 1) ?
 
-      } else {
-        return null;
+          prevState.start + prevState.step : 0
+
+        ,
+
+        end: (prevState.end >= 0 && prevState.end < prevState.testimonials.length - 1) ?
+
+          prevState.end + prevState.step : 0
+
       }
+
     })
   }
 
@@ -60,12 +66,18 @@ class Testimonials extends React.Component {
 
         <ArrowLeft onClick={this.slideLeft} />
 
-        {testimonials.slice(this.state.start, this.state.end).map(testimonial => (
+        {/* {testimonials.slice(this.state.start, this.state.end).map(testimonial => (
           <Testimonial key={testimonial.id} className='testimonial__item'
             {...testimonial}
           />
         ))
-        }
+        } */}
+        <Testimonial
+          {...testimonials[this.state.start]} className='testimonial__item'
+        />
+        <Testimonial
+          {...testimonials[this.state.end]} className='testimonial__item'
+        />
 
         < ArrowRight onClick={this.slideRight} />
 

@@ -6,6 +6,8 @@ import okopowa from "./images/offers/4/okopowa.png";
 
 import marzena from "./images/testimonials/1/marzena.png";
 import piotr from "./images/testimonials/2/piotr.png";
+import mietek from "./images/testimonials/3/piotr.png";
+import grazyna from "./images/testimonials/4/marzena.png";
 
 export const offers = [
   {
@@ -70,13 +72,13 @@ export const testimonials = [
   {
     "id": 3,
     "name": "Mieczysław",
-    "image": "",
+    "image": mietek,
     "content": "Polecam tym wszystkim, którzy potrzebują reprezentatywnego lokalu w centrum miasta. Rewelacyjne rozwiązanie, niewymagające angażowania dużych śro dków finansowych oraz czasu. Profesjonalna obsługa, oszczędność czasu i pieniędzy."
   },
   {
     "id": 4,
     "name": "Grażyna",
-    "image": "",
+    "image": grazyna,
     "content": "Bardzo wygodne i przyjemne miejsce. Minimum formalności, pełny profesjonalizm i wygoda."
   }
 ]
