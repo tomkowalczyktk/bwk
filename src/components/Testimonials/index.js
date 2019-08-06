@@ -58,7 +58,6 @@ class Testimonials extends React.Component {
   }
 
 
-
   render() {
     const { testimonials } = this.state;
     return (
@@ -66,17 +65,11 @@ class Testimonials extends React.Component {
 
         <ArrowLeft onClick={this.slideLeft} />
 
-        {/* {testimonials.slice(this.state.start, this.state.end).map(testimonial => (
-          <Testimonial key={testimonial.id} className='testimonial__item'
-            {...testimonial}
-          />
-        ))
-        } */}
         <Testimonial
-          {...testimonials[this.state.start]} className='testimonial__item'
+          {...testimonials[this.state.start]} className='testimonials__item'
         />
         <Testimonial
-          {...testimonials[this.state.end]} className='testimonial__item'
+          {...testimonials[this.state.end]} className='testimonials__item testimonials__item--second'
         />
 
         < ArrowRight onClick={this.slideRight} />

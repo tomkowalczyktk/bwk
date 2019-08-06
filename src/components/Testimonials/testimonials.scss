@@ -28,5 +28,13 @@
     margin: 0 auto;
     max-width: 35%;
     display: block;
+    @media all and (max-width: 1000px) {
+      width: 70%;
+    }
+    &--second {
+      @media all and (max-width: 1000px) {
+        display: none !important;
+      }
+    }
   }
 }
