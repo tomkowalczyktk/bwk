@@ -8,7 +8,7 @@ import Headline from '../components/Headline';
 import AdvantageSection from '../components/AdvantageSection';
 import Testimonials from '../components/Testimonials';
 import { testimonials } from '../source';
-
+import Footer from '../components/Footer';
 
 const IndexPage = () => (
   <main>
@@ -38,10 +38,17 @@ const IndexPage = () => (
     </div>
 
     <div className='container'>
+      <a name="testimonials"></a>
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
+    <Footer
+      name='Biuro w Kamienicy'
+      address='ul. Lipowa 4a, 20-420 Lublin'
+      nip='725-18-01-126'
+      krs='0000045146'
 
+    />
 
   </main>
 

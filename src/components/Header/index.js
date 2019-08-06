@@ -14,7 +14,7 @@ const Header = ({ children }) => {
               <li className="header-nav-bar__item"><Link to="/oferty">Biura</Link></li>
               <li className="header-nav-bar__item"><Link to="#advantages">Korzyści</Link></li>
               <li className="header-nav-bar__item"><Link to="/oferty">Kontakt</Link></li>
-              <li className="header-nav-bar__item"><Link to="/oferty">Referencje</Link></li>
+              <li className="header-nav-bar__item"><Link to="#testimonials">Referencje</Link></li>
             </ul>
             <img className="header__top__nav__burger" src={burger} alt="menu burger icon" /></div>
         </div>
