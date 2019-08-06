@@ -38,6 +38,7 @@ const IndexPage = () => (
     </div>
 
     <div className='container'>
+      <a name="testimonials"></a>
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
