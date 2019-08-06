@@ -40,6 +40,7 @@ const Footer = ({ name, address, nip, krs }) => {
 
         </div>
       </div>
+      <p className='footer__bottom'>Biuro w Kamienicy &copy; Wszelkie prawa zastrzeżone</p>
     </footer>
   )
 }
