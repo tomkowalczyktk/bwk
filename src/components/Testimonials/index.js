@@ -72,11 +72,11 @@ class Testimonials extends React.Component {
           />
         ))
         } */}
-        <Testimonial
-          {...testimonials[this.state.start]} className='testimonial__item'
+        <Testimonial className='testimonials__item '
+          {...testimonials[this.state.start]}
         />
-        <Testimonial
-          {...testimonials[this.state.end]} className='testimonial__item'
+        <Testimonial className='testimonials__item testimonials__item--second'
+          {...testimonials[this.state.end]}
         />
 
         < ArrowRight onClick={this.slideRight} />
