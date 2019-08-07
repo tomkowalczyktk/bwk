@@ -14,11 +14,7 @@ const Header = ({ children }) => {
               <li className="header-nav-bar__item"><Link to="/oferty">Biura</Link></li>
               <li className="header-nav-bar__item"><a href="#advantages">Korzyści</a></li>
               <li className="header-nav-bar__item"><Link to="/oferty">Kontakt</Link></li>
-<<<<<<< HEAD
-              <li className="header-nav-bar__item"><Link to="#testimonials">Referencje</Link></li>
-=======
               <li className="header-nav-bar__item"><a href="#testimonials">Referencje</a></li>
->>>>>>> develop-6-home-testimonials
             </ul>
             <img className="header__top__nav__burger" src={burger} alt="menu burger icon" /></div>
         </div>

@@ -65,13 +65,6 @@ class Testimonials extends React.Component {
 
         <ArrowLeft onClick={this.slideLeft} />
 
-<<<<<<< HEAD
-        <Testimonial
-          {...testimonials[this.state.start]} className='testimonials__item'
-        />
-        <Testimonial
-          {...testimonials[this.state.end]} className='testimonials__item testimonials__item--second'
-=======
 
         <Testimonial
           className='testimonials__item '
@@ -80,7 +73,6 @@ class Testimonials extends React.Component {
         <Testimonial
           className='testimonials__item testimonials__item--second'
           {...testimonials[this.state.end]}
->>>>>>> develop-6-home-testimonials
         />
 
         < ArrowRight onClick={this.slideRight} />

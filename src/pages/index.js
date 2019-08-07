@@ -38,13 +38,8 @@ const IndexPage = () => (
 
     </div>
 
-<<<<<<< HEAD
-    <div className='container'>
-      <a name="testimonials"></a>
-=======
     <div className='container' id="testimonials">
 
->>>>>>> develop-6-home-testimonials
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
