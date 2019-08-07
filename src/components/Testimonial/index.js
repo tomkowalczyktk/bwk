@@ -1,9 +1,10 @@
 import React from 'react';
 import './testimonial.scss';
+import classnames from 'classnames';
 
-const Testimonial = ({ image, name, content }) => {
+const Testimonial = ({ image, name, content, className }) => {
   return (
-    <div className='testimonial'>
+    <div className={classnames('testimonial', className)}>
 
       <img className='testimonial__avatar' src={image} alt={`foto ${name}`} />
       <h3 className='testimonial__signature'>{name}</h3>
