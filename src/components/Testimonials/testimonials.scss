@@ -8,6 +8,12 @@
     text-align: center;
     max-width: 15%;
     display: block;
+    &:hover {
+      cursor: pointer;
+      svg {
+        fill: lighten(#c8c7c7, 10);
+      }
+    }
     &--l {
       text-align: right;
       padding-right: 0;
@@ -28,6 +34,12 @@
     margin: 0 auto;
     max-width: 35%;
     display: block;
+<<<<<<< HEAD
+=======
+    @media all and(max-width:1000px) {
+      max-width: 70%;
+    }
+>>>>>>> develop-6-home-testimonials
     &--second {
       @media all and(max-width:1000px) {
         display: none;

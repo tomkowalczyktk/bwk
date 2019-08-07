@@ -29,16 +29,22 @@ const IndexPage = () => (
 
 
 
-    <div className='container'>
-      <a name="advantages"></a>
-      <div className="container">
-        <Headline title="Korzyści" />
-        <AdvantageSection />
-      </div>
+    <div className='container' id="advantages">
+
+
+      <Headline title="Korzyści" />
+      <AdvantageSection />
+
+
     </div>
 
+<<<<<<< HEAD
     <div className='container'>
       <a name="testimonials"></a>
+=======
+    <div className='container' id="testimonials">
+
+>>>>>>> develop-6-home-testimonials
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
