@@ -66,16 +66,13 @@ class Testimonials extends React.Component {
 
         <ArrowLeft onClick={this.slideLeft} />
 
-        {/* {testimonials.slice(this.state.start, this.state.end).map(testimonial => (
-          <Testimonial key={testimonial.id} className='testimonial__item'
-            {...testimonial}
-          />
-        ))
-        } */}
-        <Testimonial className='testimonials__item '
+
+        <Testimonial
+          className='testimonials__item '
           {...testimonials[this.state.start]}
         />
-        <Testimonial className='testimonials__item testimonials__item--second'
+        <Testimonial
+          className='testimonials__item testimonials__item--second'
           {...testimonials[this.state.end]}
         />
 

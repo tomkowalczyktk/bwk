@@ -10,6 +10,7 @@ const AdvantageSection = () => {
   return (
 
     <div className="advantage-section">
+
       <Advantage
         icon={location}
         title="Prestiżowa lokalizacja"
