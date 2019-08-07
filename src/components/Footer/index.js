@@ -12,15 +12,15 @@ const Footer = ({ name, address, nip, krs }) => {
           <div className='footer__directions__shortcuts'>
             <h4>Na skróty</h4>
             <Link to="/oferty">Biura</Link>
-            <Link href='#advantages'>Korzyści</Link>
-            <Link href='#testimonials'>Referencje</Link>
-            <Link href="/contact">Kontakt</Link>
+            <Link to='#advantages'>Korzyści</Link>
+            <Link to='#testimonials'>Referencje</Link>
+            <Link to="/contact">Kontakt</Link>
           </div>
           <div className='footer__directions__docs'>
             <h4>Dokumenty</h4>
-            <Link href='../../components/documents/statute.txt'>Regulamin</Link>
-            <Link href='../../components/documents/tenatcy-contract.txt'>Umowa najmu</Link>
-            <Link href='../../components/documents/protocol-of-reception.txt'>Protokół odbioru</Link>
+            <Link to='../../components/documents/tenatcy-contract.txt'>Umowa najmu</Link>
+            <Link to='../../components/documents/statute.txt'>Regulamin</Link>
+            <Link to='../../components/documents/protocol-of-reception.txt'>Protokół odbioru</Link>
           </div>
           <div className='footer__directions__hot-offers'>
             <h4>Gorące oferty</h4>
