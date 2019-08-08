@@ -2,10 +2,14 @@
   margin: 0 auto;
   margin-bottom: 60px;
   text-align: center;
+  @media all and(max-width:1000px) {
+    margin-bottom: 0;
+  }
   &__avatar {
     margin: 0 auto;
     border-radius: 50%;
     display: block;
+    text-align: center;
   }
   &__signature {
     margin: 40px auto 0 auto;
@@ -23,5 +27,8 @@
     font-size: 14px;
     text-align: center;
     word-wrap: break-word;
+    @media all and (max-width: 1000px) {
+      width: 100%;
+    }
   }
 }

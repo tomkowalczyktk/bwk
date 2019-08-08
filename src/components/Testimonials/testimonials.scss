@@ -1,33 +1,42 @@
 .testimonials {
   margin: 130px 0 40px 0;
   display: flex;
+  @media all and (max-width: 1000px) {
+    position: relative;
+    margin: 40px 0 0px 0;
+  }
 
   &__chevron {
-    margin: 0;
-    padding: 50px 20px;
-    text-align: center;
-    max-width: 15%;
+    padding: 0px 0px;
+    margin-top: 50px;
+    max-width: 60px;
     display: block;
-    &:hover {
-      cursor: pointer;
-      svg {
-        fill: lighten(#c8c7c7, 10);
+    justify-items: center;
+
+    &--l {
+      width: 100%;
+      @media all and (max-width: 1000px) {
+        position: absolute;
+        left: 0;
+        top: 0;
       }
     }
-    &--l {
-      text-align: right;
-      padding-right: 0;
-      width: 100%;
-    }
     &--r {
-      text-align: left;
-      padding-left: 0;
       width: 100%;
+      @media all and (max-width: 1000px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
     }
     svg {
       height: 60px;
       width: 60px;
       fill: #c8c7c7;
+      &:hover {
+        cursor: pointer;
+        fill: lighten(#c8c7c7, 10);
+      }
     }
   }
   &__item {
@@ -35,7 +44,7 @@
     max-width: 35%;
     display: block;
     @media all and(max-width:1000px) {
-      max-width: 70%;
+      max-width: 100%;
     }
     &--second {
       @media all and(max-width:1000px) {
