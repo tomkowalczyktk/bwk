@@ -7,9 +7,14 @@
   }
 
   &__chevron {
-    padding: 50px 0px;
-    max-width: 15%;
+    padding: 0px 0px;
+    margin-top: 50px;
+    max-width: 60px;
     display: block;
+    justify-items: center;
+    @media all and(max-width:1000px) {
+      margin-top: 40px;
+    }
 
     &--l {
       width: 100%;
