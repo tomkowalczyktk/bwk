@@ -10,9 +10,6 @@
     border-radius: 50%;
     display: block;
     text-align: center;
-    @media all and (max-width: 1000px) {
-      width: 40%;
-    }
   }
   &__signature {
     margin: 40px auto 0 auto;
