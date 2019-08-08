@@ -14,7 +14,7 @@ const Footer = ({ name, address, nip, krs }) => {
             <Link to="/oferty">Biura</Link>
             <Link to='#advantages'>Korzyści</Link>
             <Link to='#testimonials'>Referencje</Link>
-            <Link to="/contact">Kontakt</Link>
+            <Link to="#">Kontakt</Link>
           </div>
           <div className='footer__directions__docs'>
             <h4>Dokumenty</h4>
