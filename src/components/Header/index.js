@@ -4,47 +4,42 @@ import logo from '../../images/logo.png';
 import HeaderNavBar from './HeaderNavBar';
 import Burger from './Burger';
 import './header.scss';
+import classnames from 'classnames';
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      visible: true
+      displayMenu: true,
+
     }
     this.toggle = this.toggle.bind(this);
   }
   toggle(event) {
-    {
-      HeaderNavBar
-        .style = { display: "none" ? "block" : "none" && console.log("in header nav") }
-    }
+
+    this.setState(prevState => (
+      {
+        displayMenu: !prevState.displayMenu
+      }
+    ));
   }
 
 
 
 
-
-  //   this.style = {{ display: block }
-  // } ? && ${ HeaderNavBar }.style = {{ display: none }} ? ${ HeaderNavBar }.style = {{ display: block }} :
-  // ${HeaderNavBar}.style={{display:none}}
-
-  // return (
-  //   console.log('toggle works')
-
-  // );
-
   render() {
+    const { displayMenu } = this.state;
     const { children } = this.props;
+
     return (
-      <header className="header">
+      <header className={classnames("header", { "header--menu-opened": displayMenu })}>
         <div className="container container--header">
+
           <div className="header__top">
             <Link to="/"><img src={logo} className="header__top__logo" alt="Logo" /></Link>
             <div className="header__top__nav">
-              <HeaderNavBar />
-              <Burger onClick={this.toggle} />
-
-
+              {displayMenu && <HeaderNavBar />}
+              < Burger onClick={this.toggle} />
             </div>
 
           </div>

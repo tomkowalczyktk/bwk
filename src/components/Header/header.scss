@@ -7,9 +7,18 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  &--menu-opened {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+  }
 
   .container--header {
     padding-bottom: 350px;
+
     @media all and(max-width:800px) {
       padding-bottom: 100px;
     }
@@ -30,6 +39,9 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @media all and(max-width:800px) {
+        flex-direction: column-reverse;
+      }
 
       .header-nav-bar {
         margin: 0;
@@ -38,12 +50,32 @@
         list-style: none;
 
         @media all and(max-width:800px) {
-          display: none;
+          flex-direction: column;
+          margin: 10px 10px 0 0;
+          background-color: black;
+          width: 100%;
+          z-index: 100;
+          position: fixed;
+          top: 75px;
+          left: 0;
+
+          justify-items: center;
+          align-items: center;
+          justify-content: center;
+          :last-child {
+            border-bottom: none;
+          }
         }
 
         &__item {
           margin: 0;
           padding: 21px;
+          @media all and(max-width:800px) {
+            padding: 10px 0px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid white;
+          }
           a {
             margin: 0;
             padding: 0;
@@ -51,6 +83,12 @@
             color: white;
             font-size: 18px;
             font-family: benton-sans;
+            @media all and(max-width:800px) {
+              font-size: 20px;
+              display: block;
+              padding: 20px 0;
+              text-align: center;
+            }
 
             &:hover {
               text-decoration: none;
@@ -69,6 +107,7 @@
         }
         @media all and(max-width:800px) {
           display: block;
+          fill: white;
         }
       }
     }
