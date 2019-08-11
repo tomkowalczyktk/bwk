@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { offers } from '../../source';
 
 
-const Footer = ({ name, address, nip, krs }) => {
+const Footer = ({ name, address, email, nip, krs }) => {
   return (
     <footer className='footer'>
       <div className='container'>
@@ -35,6 +35,7 @@ const Footer = ({ name, address, nip, krs }) => {
           <h4>Kontakt</h4>
           <p>{name}</p>
           <p>{address}</p>
+          <p><a href={email}>{email}</a></p>
           <p>NIP: {nip}</p>
           <p>KRS: {krs}</p>
 

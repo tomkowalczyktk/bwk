@@ -48,6 +48,7 @@ const IndexPage = () => (
 
         name='Biuro w Kamienicy'
         address='ul. Lipowa 4a, 20-420 Lublin'
+        email='huber-kamienicznik@bwk.com'
         nip='725-18-01-126'
         krs='0000045146'
 
