@@ -6,10 +6,10 @@ import { Link } from 'gatsby';
 const HeaderButton = ({ image, text }) => {
   return (
     <div className="header-button-row">
-      <Link className="header-button" to="/">
+      <a className="header-button" to="#offers">
         <img src={image}></img>
         {text}
-      </Link>
+      </a>
     </div>
   );
 }

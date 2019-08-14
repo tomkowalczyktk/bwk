@@ -19,6 +19,7 @@
     background-color: darken($color: white, $amount: 5);
     color: lighten($color: #000000, $amount: 2);
     text-decoration: none;
+    cursor: pointer;
     img {
       display: inline-block;
       margin-right: -5px;

@@ -7,9 +7,12 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  @media all and(max-width:800px) {
+  }
 
   .container--header {
     padding-bottom: 350px;
+
     @media all and(max-width:800px) {
       padding-bottom: 100px;
     }
@@ -19,7 +22,16 @@
     display: flex;
     align-content: center;
     @media all and(max-width:800px) {
-      padding: 21px 0;
+      &--menu-opened {
+        align-content: center;
+        width: 100%;
+        padding: 42px 15px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
     }
 
     &__logo {
@@ -29,7 +41,10 @@
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
+      @media all and(max-width:800px) {
+        flex-direction: column-reverse;
+      }
 
       .header-nav-bar {
         margin: 0;
@@ -38,12 +53,31 @@
         list-style: none;
 
         @media all and(max-width:800px) {
-          display: none;
+          flex-direction: column;
+          margin: 10px 10px 0 0;
+          background-color: black;
+          width: 100%;
+          z-index: 100;
+          position: fixed;
+          top: 90px;
+          left: 0;
+          justify-items: center;
+          align-items: center;
+          justify-content: center;
+          :last-child {
+            border-bottom: none;
+          }
         }
 
         &__item {
           margin: 0;
           padding: 21px;
+          @media all and(max-width:800px) {
+            padding: 10px 0px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid white;
+          }
           a {
             margin: 0;
             padding: 0;
@@ -51,6 +85,12 @@
             color: white;
             font-size: 18px;
             font-family: benton-sans;
+            @media all and(max-width:800px) {
+              font-size: 20px;
+              display: block;
+              padding: 20px 0;
+              text-align: center;
+            }
 
             &:hover {
               text-decoration: none;
@@ -63,8 +103,13 @@
         width: 48px;
         height: 48px;
         display: none;
+        &:hover {
+          cursor: pointer;
+          border: 1px solid white;
+        }
         @media all and(max-width:800px) {
           display: block;
+          fill: white;
         }
       }
     }
