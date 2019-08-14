@@ -43,8 +43,10 @@ const IndexPage = () => (
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
-    <Footer />
 
+    <div id="contact">
+      <Footer />
+    </div>
   </main>
 
 );

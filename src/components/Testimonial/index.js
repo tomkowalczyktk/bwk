@@ -1,6 +1,5 @@
 import React from 'react';
 import './testimonial.scss';
-import classnames from 'classnames';
 
 
 const Testimonial = ({ image, name, content, className }) => {
