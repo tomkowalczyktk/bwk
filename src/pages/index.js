@@ -43,13 +43,7 @@ const IndexPage = () => (
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
-    <Footer
-      name='Biuro w Kamienicy'
-      address='ul. Lipowa 4a, 20-420 Lublin'
-      nip='725-18-01-126'
-      krs='0000045146'
-
-    />
+    <Footer />
 
   </main>
 
