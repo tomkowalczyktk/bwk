@@ -30,21 +30,25 @@ class Header extends React.Component {
     this.setState({
       isLargeScreen: window.innerWidth > 800,
       displayMenu: window.innerWidth > 800
+      
     });
   };
 
-  toggle(event) {
-
-    this.setState(prevState => (
-      {
-        displayMenu: !prevState.displayMenu
-      }
+  toggle() {
+    const {isLargeScreen}=this.state;
+    if(isLargeScreen){
+      return null;
+    }
+  
+    this.setState(prevState => ({
+      
+        displayMenu :!prevState.displayMenu
+    }
     ));
   }
 
 
   render() {
-    // const { isLargeScreen } = this.isLargeScreen;
     const { displayMenu } = this.state;
     const { children } = this.props;
 
@@ -55,8 +59,7 @@ class Header extends React.Component {
           <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
             <Link to="/"><img src={logo} className="header__top__logo" alt="Logo" /></Link>
             <div className="header__top__nav">
-              {displayMenu && <HeaderNavBar
-              />}
+              {displayMenu && <HeaderNavBar onClick={this.toggle}/>}
               < Burger onClick={this.toggle} />
             </div>
 
