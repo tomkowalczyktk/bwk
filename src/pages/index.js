@@ -9,6 +9,7 @@ import AdvantageSection from '../components/AdvantageSection';
 import Testimonials from '../components/Testimonials';
 import { testimonials } from '../source';
 import Footer from '../components/Footer';
+import HomeOffers from '../components/HomeOffers';
 
 const IndexPage = () => (
   <main>
@@ -27,16 +28,18 @@ const IndexPage = () => (
 
     </Header>
 
-
-
     <div className='container' id="advantages">
-
-
       <Headline title="Korzyści" />
       <AdvantageSection />
-
-
     </div>
+
+    <div className='container' id="home-offers">
+      <Headline title="Biura" />
+      <HomeOffers />
+    </div>
+
+
+
 
     <div className='container' id="testimonials">
 
@@ -47,7 +50,7 @@ const IndexPage = () => (
     <div id="contact">
       <Footer />
     </div>
-  </main>
+  </main >
 
 );
 export default IndexPage
