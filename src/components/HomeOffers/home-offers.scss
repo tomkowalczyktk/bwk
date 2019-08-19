@@ -33,6 +33,33 @@
         margin-bottom: 15px;
       }
     }
+    &__preview-image {
+      img {
+        width: 100vw;
+        height: auto;
+        margin-top: -10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      &__arrow-left {
+        position: fixed;
+        cursor: pointer;
+        top: 500px;
+        left: 50px;
+        fill: white;
+        z-index: 1010;
+      }
+      &__arrow-right {
+        position: fixed;
+        cursor: pointer;
+        top: 500px;
+        right: 50px;
+        fill: white;
+        z-index: 1010;
+      }
+    }
     &__details {
       margin: 0 60px;
       width: 40%;

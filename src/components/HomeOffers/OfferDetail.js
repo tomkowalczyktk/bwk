@@ -8,7 +8,6 @@ export default class OfferDetails extends React.Component {
 
   render() {
     const { offer } = this.props;
-    // console.log({ offer });
 
     return (
       <div className='home-offer-desctop__details__textbox'>

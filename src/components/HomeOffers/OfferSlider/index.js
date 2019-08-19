@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import ArrowLeft from './ArrowLeft';
-import ArrowRight from './ArrowRight';
+// import ArrowLeft from './ArrowLeft';
+// import ArrowRight from './ArrowRight';
 import PropTypes from 'prop-types';
+import OfferThumbnail from './OfferThumbnail';
+import OfferPreview from './OfferPreview';
 
 export default class OfferSlider extends Component {
   static propTypes = {
@@ -13,7 +15,7 @@ export default class OfferSlider extends Component {
     super(props)
     this.state = {
       currentPhotoIndex: 0,
-      isFullScreen: false
+      isFullScreen: true
 
     }
     this.slideLeft = this.slideLeft.bind(this);
@@ -50,16 +52,15 @@ export default class OfferSlider extends Component {
   }
   render() {
     const { offer } = this.props;
-    const { currentPhotoIndex } = this.state;
-    // console.log({ currentPhotoIndex });
-    return (
-      <div>
-        <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} />
 
-        {/* <ArrowLeft onClick={this.slideLeft} />
-        <ArrowRight onClick={this.slideRight} />
- */}
-      </div >
-    )
+    const { currentPhotoIndex, isFullScreen } = this.state;
+    if (isFullScreen) {
+      return (<OfferPreview offer={offer} currentPhotoIndex={currentPhotoIndex} slideLeft={this.slideLeft} slideRight={this.slideRight} />)
+    } else {
+      return (<OfferThumbnail offer={offer} currentPhotoIndex={currentPhotoIndex} />)
+    }
+
+
+
   }
 }
