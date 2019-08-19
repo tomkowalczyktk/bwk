@@ -7,7 +7,7 @@ import keyImage from '../images/key.png';
 import Headline from '../components/Headline';
 import AdvantageSection from '../components/AdvantageSection';
 import Testimonials from '../components/Testimonials';
-import { testimonials } from '../source';
+import { testimonials, offers } from '../source';
 import Footer from '../components/Footer';
 import HomeOffers from '../components/HomeOffers';
 
@@ -35,7 +35,7 @@ const IndexPage = () => (
 
     <div className='container' id="home-offers">
       <Headline title="Biura" />
-      <HomeOffers />
+      <HomeOffers offers={offers} />
     </div>
 
 
