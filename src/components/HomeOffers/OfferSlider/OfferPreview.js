@@ -9,16 +9,16 @@ export default class OfferPreview extends React.Component {
     currentPhotoIndex: PropTypes.number.isRequired,
     slideLeft: PropTypes.func.isRequired,
     slideRight: PropTypes.func.isRequired,
-
+    onClick: PropTypes.func.isRequired
   }
 
 
   render() {
-    const { offer, currentPhotoIndex, slideLeft, slideRight } = this.props;
-    console.log(offer.photos[currentPhotoIndex].fullScreen)
+    const { offer, currentPhotoIndex, slideLeft, slideRight, onClick } = this.props;
+
     return (
       <div className='home-offer-desctop__preview-image'>
-        <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} />
+        <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} onClick={onClick} />
 
         <ArrowLeft onClick={slideLeft} />
         <ArrowRight onClick={slideRight} />

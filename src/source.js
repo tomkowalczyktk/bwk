@@ -26,8 +26,13 @@ export const offers = [
       },
       {
         "title": "office2",
-        "original": sadowa2,
-        "fullScreen": fullScreenSadowa2
+        "original": lipowa,
+        "fullScreen": fullScreenLipowa
+      },
+      {
+        "title": "office3",
+        "original": chopina,
+        "fullScreen": fullScreenChopina,
       }
     ],
 

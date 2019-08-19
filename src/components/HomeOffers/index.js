@@ -13,12 +13,19 @@ class HomeOffers extends React.Component {
 
       isDesctop: true,
       currentOfferIndex: 0
+
     }
+
+
     this.navigatePreviouse = this.navigatePreviouse.bind(this);
     this.navigateNext = this.navigateNext.bind(this);
+
   }
+
   navigatePreviouse() {
+
     const { offers } = this.props;
+
     this.setState(
       (prevState) => {
         if (prevState.currentOfferIndex > 0) {
@@ -35,7 +42,9 @@ class HomeOffers extends React.Component {
   }
 
   navigateNext() {
+
     const { offers } = this.props;
+
     this.setState(
       (prevState) => {
         if (prevState.currentOfferIndex < offers.length - 1) {
@@ -51,6 +60,7 @@ class HomeOffers extends React.Component {
     )
   }
   render() {
+
     const { offers } = this.props;
 
     return (
