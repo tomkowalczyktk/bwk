@@ -1,7 +1,5 @@
 import sadowa from "./images/offers/1/sadowa.png";
-import sadowa2 from "./images/offers/1/sadowa2.png";
 import fullScreenSadowa from './images/offers/1/fullScreenSadowa.png';
-import fullScreenSadowa2 from './images/offers/1/fullScreenSadowa2.png';
 import chopina from "./images/offers/2/chopina.png";
 import fullScreenChopina from './images/offers/2/fullScreenChopina.png';
 import lipowa from "./images/offers/3/lipowa.png";

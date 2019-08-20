@@ -75,8 +75,9 @@ export default class OfferSlider extends Component {
         currentPhotoIndex={currentPhotoIndex} onClick={this.previewToggle}
       />)
     }
-
-
-
   }
+
+
+
+
 }

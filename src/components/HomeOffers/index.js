@@ -3,6 +3,8 @@ import './home-offers.scss';
 import OfferSlider from './OfferSlider';
 import OfferNavigationControls from './OfferSlider/OfferNavigationControls';
 import OfferDetails from './OfferDetail';
+import OfferSliderMobile from './OfferSlider/OfferSliderMobile';
+
 
 
 class HomeOffers extends React.Component {
@@ -12,15 +14,32 @@ class HomeOffers extends React.Component {
     this.state = {
 
       isDesctop: true,
-      currentOfferIndex: 0
-
+      currentOfferIndex: 0,
+      isLargeScreen: true,
     }
 
 
     this.navigatePreviouse = this.navigatePreviouse.bind(this);
     this.navigateNext = this.navigateNext.bind(this);
-
+    this.screenChange = this.screenChange.bind(this);
   }
+
+  componentDidMount() {
+    this.screenChange();
+    window.addEventListener("resize", this.screenChange);
+  }
+
+  componentWillUnmount() {
+    this.removeEventListener("resize", this.screenChange);
+  }
+
+  screenChange() {
+    this.setState({
+      isLargeScreen: window.innerWidth > 800,
+
+
+    });
+  };
 
   navigatePreviouse() {
 
@@ -62,55 +81,70 @@ class HomeOffers extends React.Component {
   render() {
 
     const { offers } = this.props;
-
-    return (
-      <div className='home-offers'>
-        <div className='home-offer-desctop'>
-          <div className='home-offer-desctop__row'>
-            <div className='home-offer-desctop__button-top'>
-              <a href="#">Wynajmij biuro</a>
-            </div>
-            <div className='home-offer-desctop__button-top'><a href="#">Wynajmij cały lokal</a>
-            </div>
-          </div>
-          <div className='home-offer-desctop__row home-offer-desctop__row--details'>
-
-            <div className='home-offer-desctop__image'>
-
-              <OfferSlider offer={offers[this.state.currentOfferIndex]} />
+    const { isLargeScreen, currentOfferIndex } = this.state
 
 
-            </div>
+    if (isLargeScreen) {
 
-            <div className='home-offer-desctop__details'>
-              <div className='home-offer-desctop__details__navigation'>
-                <OfferNavigationControls offers={offers} navigatePreviouse={this.navigatePreviouse} navigateNext={this.navigateNext} currentOfferIndex={this.state.currentOfferIndex} />
+
+      return (
+        <div className='home-offers'>
+
+          <div className='home-offer-desctop'>
+            <div className='home-offer-desctop__row'>
+              <div className='home-offer-desctop__button-top'>
+                <a href="#">Wynajmij biuro</a>
               </div>
+              <div className='home-offer-desctop__button-top'><a href="#">Wynajmij cały lokal</a>
+              </div>
+            </div>
+            <div className='home-offer-desctop__row home-offer-desctop__row--details'>
 
+              <div className='home-offer-desctop__image'>
 
-              <OfferDetails offer={offers[this.state.currentOfferIndex]} />
+                <OfferSlider offer={offers[this.state.currentOfferIndex]} offers={offers} />
 
-
-
-              <div className='home-offer-desctop__details__navigation-bottom'>
-                <div className='home-offer-desctop__details__navigation-bottom__element home-offer-desctop__details__navigation-bottom__element--left'>
-                  <p><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                    <title>forward</title>
-                    <path d="M16.711 8.29l-6-5.996c-0.391-0.391-1.026-0.391-1.417 0s-0.391 1.025 0 1.417l4.293 4.29h-11.59c-0.553 0-1.001 0.448-1.001 1s0.448 1 1.001 1h11.59l-4.292 4.29c-0.391 0.391-0.391 1.025 0.001 1.417s1.026 0.391 1.417 0l6-5.997c0.196-0.196 0.294-0.453 0.294-0.71s-0.097-0.514-0.294-0.71z"></path>
-                  </svg>Zobacz więcej</p>
-                </div>
-                <div className='home-offer-desctop__details__navigation-bottom__element home-offer-desctop__details__navigation-bottom__element--right'>
-                  <p>Wszystkie biura</p>
-                </div>
 
               </div>
 
-            </div>
+              <div className='home-offer-desctop__details'>
+                <div className='home-offer-desctop__details__navigation'>
+                  <OfferNavigationControls offers={offers} navigatePreviouse={this.navigatePreviouse} navigateNext={this.navigateNext} currentOfferIndex={this.state.currentOfferIndex} />
+                </div>
 
+
+                <OfferDetails offer={offers[this.state.currentOfferIndex]} />
+
+
+
+                <div className='home-offer-desctop__details__navigation-bottom'>
+                  <div className='home-offer-desctop__details__navigation-bottom__element home-offer-desctop__details__navigation-bottom__element--left'>
+                    <p><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                      <title>forward</title>
+                      <path d="M16.711 8.29l-6-5.996c-0.391-0.391-1.026-0.391-1.417 0s-0.391 1.025 0 1.417l4.293 4.29h-11.59c-0.553 0-1.001 0.448-1.001 1s0.448 1 1.001 1h11.59l-4.292 4.29c-0.391 0.391-0.391 1.025 0.001 1.417s1.026 0.391 1.417 0l6-5.997c0.196-0.196 0.294-0.453 0.294-0.71s-0.097-0.514-0.294-0.71z"></path>
+                    </svg>Zobacz więcej</p>
+                  </div>
+                  <div className='home-offer-desctop__details__navigation-bottom__element home-offer-desctop__details__navigation-bottom__element--right'>
+                    <p>Wszystkie biura</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
           </div>
+
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className='home-offers'>
+          <OfferSliderMobile
+            offers={offers} navigatePreviouse={this.navigatePreviouse} navigateNext={this.navigateNext} currentOfferIndex={currentOfferIndex} />
+        </div>
+      );
+    }
   }
 }
 export default HomeOffers;

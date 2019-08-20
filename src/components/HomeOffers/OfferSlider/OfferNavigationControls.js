@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class OfferNavigationControls extends React.Component {
   static propTypes = {
-    offers: PropTypes.array.isRequired,
+    offers: PropTypes.object.isRequired,
     navigatePreviouse: PropTypes.func.isRequired,
     navigateNext: PropTypes.func.isRequired,
     currentOfferIndex: PropTypes.number.isRequired
