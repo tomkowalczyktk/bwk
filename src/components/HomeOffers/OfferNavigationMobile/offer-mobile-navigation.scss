@@ -1,0 +1,21 @@
+.offer-mobile-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__button {
+    margin: 20px 10px;
+    width: 150px;
+    background-color: #000000;
+    color: white;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid gray;
+      background-color: lighten($color: #000000, $amount: 30);
+    }
+    p {
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}

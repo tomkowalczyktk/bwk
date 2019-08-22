@@ -23,7 +23,7 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    this.removeEventListener("resize", this.screenChange);
+    window.removeEventListener("resize", this.screenChange);
   }
 
   screenChange() {

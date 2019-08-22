@@ -1,9 +1,10 @@
 import React from 'react';
 import './home-offers.scss';
 import OfferSlider from './OfferSlider';
-import OfferNavigationControls from './OfferSlider/OfferNavigationControls';
-import OfferDetails from './OfferDetail';
+import OfferNavigationControls from './OfferNavigationControls';
+import OfferDetails from './OfferDetails';
 import OfferSliderMobile from './OfferSlider/OfferSliderMobile';
+import { Link } from 'gatsby';
 
 
 
@@ -125,7 +126,7 @@ class HomeOffers extends React.Component {
                     </svg>Zobacz więcej</p>
                   </div>
                   <div className='home-offer-desctop__details__navigation-bottom__element home-offer-desctop__details__navigation-bottom__element--right'>
-                    <p>Wszystkie biura</p>
+                    <Link><p>Wszystkie biura</p></Link>
                   </div>
 
                 </div>

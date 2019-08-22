@@ -2,6 +2,7 @@ import React from 'react'
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import PropTypes from 'prop-types';
+import './preview.scss';
 
 export default class OfferPreview extends React.Component {
   static propTypes = {
@@ -17,7 +18,7 @@ export default class OfferPreview extends React.Component {
     const { offer, currentPhotoIndex, slideLeft, slideRight, onClick } = this.props;
 
     return (
-      <div className='home-offer-desctop__preview-image'>
+      <div className='preview-image'>
         <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} onClick={onClick} />
 
         <ArrowLeft onClick={slideLeft} />

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OfferNavigationMobile from './OfferNavigationMobile';
+import OfferNavigationMobile from '../OfferNavigationMobile';
 
 
 export default class OfferSliderMobile extends React.Component {
   static propTypes = {
-    offers: PropTypes.object.isRequired,
+    offers: PropTypes.array.isRequired,
     currentOfferIndex: PropTypes.number.isRequired,
     navigatePreviouse: PropTypes.func.isRequired,
     navigateNext: PropTypes.func.isRequired

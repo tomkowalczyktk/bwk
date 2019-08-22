@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './offer-mobile-navigation.scss';
 
 export default class OfferNavigationMobile extends React.Component {
   static propTypes = {
@@ -9,12 +10,12 @@ export default class OfferNavigationMobile extends React.Component {
   render() {
     const { navigatePreviouse, navigateNext } = this.props;
     return (
-      <div className='home-offer-mobile__navigation'>
-        <div className='home-offer-mobile__navigation__button'
+      <div className='offer-mobile-navigation'>
+        <div className='offer-mobile-navigation__button'
           onClick={navigatePreviouse}>
           <p>Poprzednie biuro</p>
         </div>
-        <div className='home-offer-mobile__navigation__button'
+        <div className='offer-mobile-navigation__button'
           onClick={navigateNext}>
           <p>Następne biuro</p>
         </div>

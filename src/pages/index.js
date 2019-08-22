@@ -28,6 +28,8 @@ const IndexPage = () => (
 
     </Header>
 
+
+
     <div className='container' id="advantages">
       <Headline title="Korzyści" />
       <AdvantageSection />
