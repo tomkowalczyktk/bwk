@@ -4,8 +4,7 @@ import burger from '../../images/icon-burger.png';
 
 function Burger({ onClick }) {
   return (
-    // <img className="header__top__nav__burger" src={burger} alt="menu burger icon"
-    //   onClick={onClick} />
+
 
     <svg className="header__top__nav__burger" src={burger} alt="menu burger icon"
       onClick={onClick} version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">

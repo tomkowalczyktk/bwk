@@ -1,6 +1,7 @@
-.offer-navigations-controls {
+.offer-navigation-controls {
   display: flex;
   background-color: #000000;
+
   &__element {
     color: white;
     cursor: pointer;
@@ -8,6 +9,26 @@
     text-align: center;
     padding: 20px 0px;
     width: 50%;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    &--left {
+      &:hover {
+        p {
+          text-shadow: 2px -2px 10px white;
+          margin-left: -4px;
+        }
+      }
+    }
+    &--right {
+      &:hover {
+        p {
+          text-shadow: 2px 2px 10px white;
+          margin-right: -4px;
+        }
+      }
+    }
   }
   &__status {
     border: 1px solid grey;

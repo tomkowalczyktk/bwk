@@ -29,11 +29,11 @@ const IndexPage = () => (
     </Header>
 
 
-
     <div className='container' id="advantages">
       <Headline title="Korzyści" />
       <AdvantageSection />
     </div>
+
 
     <div className='container' id="home-offers">
       <Headline title="Biura" />
@@ -41,10 +41,7 @@ const IndexPage = () => (
     </div>
 
 
-
-
     <div className='container' id="testimonials">
-
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>

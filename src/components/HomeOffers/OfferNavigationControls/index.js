@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './offer-navigation.scss';
+import './offer-navigation-controls.scss';
 
 export default class OfferNavigationControls extends React.Component {
   static propTypes = {
@@ -18,11 +18,11 @@ export default class OfferNavigationControls extends React.Component {
 
     return (
       <div className='offer-navigation-controls'>
-        <div className='offer-navigation-controls__element' onClick={navigatePreviouse}>Poprzednie biuro</div>
+        <div className='offer-navigation-controls__element offer-navigation-controls__element--left' onClick={navigatePreviouse}><p>Poprzednie biuro</p></div>
 
         <div className='offer-navigation-controls__status'><p>{currentOfferIndex + 1} z {offers.length} biur</p> </div>
 
-        <div className='offer-navigation-controls__element' onClick={navigateNext}>Następne biuro</div>
+        <div className='offer-navigation-controls__element offer-navigation-controls__element--right' onClick={navigateNext}><p>Następne biuro</p></div>
 
       </div>
     );

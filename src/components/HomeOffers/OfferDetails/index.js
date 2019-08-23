@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OfferDetail from './OfferSlider/OfferDetail';
+import OfferDetail from '../OfferDetail';
+import './offer-details-textbox.scss';
 
 export default class OfferDetails extends React.Component {
   static propTypes = {
@@ -11,7 +12,7 @@ export default class OfferDetails extends React.Component {
     const { offer } = this.props;
 
     return (
-      <div className='home-offer-desctop__details__textbox'>
+      <div className='offer-details-textbox'>
 
         <OfferDetail
           label="Powierzchnia"

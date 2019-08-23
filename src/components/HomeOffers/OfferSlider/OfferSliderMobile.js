@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OfferNavigationMobile from '../OfferNavigationMobile';
+import './offer-slider.scss';
+
 
 
 export default class OfferSliderMobile extends React.Component {

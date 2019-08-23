@@ -1,5 +1,5 @@
 import React from 'react';
-import './offer-details-textbox.scss';
+import './textbox.scss';
 import PropTypes, { bool, number, string } from 'prop-types';
 
 export default class OfferDetail extends React.Component {
@@ -32,10 +32,10 @@ export default class OfferDetail extends React.Component {
 
 
     return (
-      <div className='offer-details-textbox'>
-        <div className='offer-details-textbox__element'>
-          <p className='offer-details-textbox__element__left'>{label}:</p>
-          <p className='offer-details-textbox__element__right'> {valueDisplayed}</p>
+      <div className='textbox'>
+        <div className='textbox__element'>
+          <p className='textbox__element__left'>{label}:</p>
+          <p className='textbox__element__right'> {valueDisplayed}</p>
         </div>
       </div>
     )
