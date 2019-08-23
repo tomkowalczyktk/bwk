@@ -4,83 +4,23 @@
       display: flex;
       justify-items: center;
       align-items: center;
+      align-content: center;
       justify-content: center;
-
+      width: 100%;
       justify-content: space-between;
-      // position: relative;
     }
 
     &__image {
       width: 60%;
-      max-height: 100%;
-      // position: absolute;
-      // top: 50%;
-      // left: 0;
-      // transform: translate(0, 50%);
-
-      img {
-        cursor: pointer;
-        width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        margin-bottom: 17px;
-      }
+      height: 460px;
     }
-    // &__preview-image {
-    //   position: fixed;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: 1000;
-    //   img {
-    //     cursor: pointer;
-    //     max-width: 100%;
-    //     height: 100%;
-    //     margin-top: -10px;
-    //     object-fit: cover;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(50%, 50%);
-    //   }
-    //   &__arrow-left {
-    //     position: fixed;
-    //     cursor: pointer;
-    //     padding: 20px;
-    //     top: 50%;
-    //     left: 50px;
-    //     transform: translate(50%);
-    //     fill: white;
-    //     z-index: 1010;
-    //     &:hover {
-    //       border-radius: 50%;
-    //       box-shadow: 0px 0px 10px 5px white;
-    //     }
-    //   }
-    //   &__arrow-right {
-    //     position: fixed;
-    //     cursor: pointer;
-    //     padding: 20px;
-    //     top: 50%;
-    //     right: 50px;
-    //     transform: translate(50%);
-    //     fill: white;
-    //     z-index: 1010;
-    //     &:hover {
-    //       border-radius: 50%;
-    //       box-shadow: 0px 0px 10px 5px white;
-    //     }
-    //   }
-    // }
+
     &__details {
-      margin: 0;
-      width: 35%;
-      max-height: 100%;
+      margin: 0 0 0 20px;
+      width: 40%;
+      height: 500px;
       display: block;
       object-fit: contain;
-      // position: absolute;
-      // top: 50%;
-      // right: 0;
-      // transform: translate(0, 50%);
     }
   }
 }

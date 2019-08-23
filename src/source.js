@@ -51,8 +51,8 @@ export const offers = [
         "fullScreen": fullScreenChopina
       }
     ],
-    "area": "20",
-    "price": "1300",
+    "area": "21",
+    "price": "1400",
     "floor": "1",
     "internet": true,
     "social": true
@@ -68,8 +68,8 @@ export const offers = [
         "fullScreen": fullScreenLipowa
       }
     ],
-    "area": "20",
-    "price": "1300",
+    "area": "27",
+    "price": "2000",
     "floor": "1",
     "internet": true,
     "social": true
@@ -85,8 +85,8 @@ export const offers = [
         "fullScreen": fullScreenOkopowa
       }
     ],
-    "area": "20",
-    "price": "1300",
+    "area": "21",
+    "price": "1500",
     "floor": "1",
     "internet": true,
     "social": true

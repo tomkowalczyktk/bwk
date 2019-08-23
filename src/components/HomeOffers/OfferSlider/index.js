@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import OfferThumbnail from './OfferThumbnail';
+import OfferThumbnail from '../OfferThumbnail';
 import OfferPreview from '../OfferPreview';
 
 export default class OfferSlider extends Component {
