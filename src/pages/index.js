@@ -10,9 +10,12 @@ import Testimonials from '../components/Testimonials';
 import { testimonials, offers } from '../source';
 import Footer from '../components/Footer';
 import HomeOffers from '../components/HomeOffers';
+import TestButton from '../components/TestButton';
+import TestSlider from '../components/TestSlider';
+
 
 const IndexPage = () => (
-  <main>
+  < main >
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
 
 
@@ -46,10 +49,16 @@ const IndexPage = () => (
       <Testimonials testimonials={testimonials} />
     </div>
 
+
+    <div className='container'>
+      <TestSlider data={offers[0].photos} />
+      <TestButton text="test button" />
+    </div>
     <div id="contact">
       <Footer />
     </div>
   </main >
 
 );
+
 export default IndexPage

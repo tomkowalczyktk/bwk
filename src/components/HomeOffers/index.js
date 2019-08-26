@@ -108,9 +108,8 @@ class HomeOffers extends React.Component {
               <div className='home-offer-desctop__details'>
 
                 <OfferNavigationControls
-                  offers={offers}
-                  navigatePreviouse={this.navigatePreviouse}
-                  navigateNext={this.navigateNext} currentOfferIndex={this.state.currentOfferIndex} />
+                  data={offers}
+                />
 
 
                 <OfferDetails offer={offers[this.state.currentOfferIndex]} />

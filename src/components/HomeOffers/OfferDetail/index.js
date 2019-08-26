@@ -23,7 +23,7 @@ export default class OfferDetail extends React.Component {
         valueDisplayed = <span>{value}zł</span>;
         break;
       case "boolean":
-        valueDisplayed = <span> {value ? "TAK" : "NIE"}</span>;
+        valueDisplayed = <span> {true ? "TAK" : "NIE"}</span>;
         break;
       default:
         valueDisplayed = <span>{value}</span>;
