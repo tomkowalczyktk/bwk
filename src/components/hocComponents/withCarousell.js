@@ -9,39 +9,37 @@ const withCarousell = (WrappedComponent) => {
     }
 
     state = {
-      Index: 0
+      index: 0
     }
 
     slideLeft = () => {
       const { data } = this.props;
 
       this.setState(prevState => ({
-        Index: prevState.Index > 0 ? prevState.Index - 1 : data.length - 1
+        index: prevState.index > 0 ? prevState.index - 1 : data.length - 1
       })
       )
     }
-
-
 
     slideRight = () => {
       const { data } = this.props;
 
       this.setState(prevState => ({
-        Index: prevState.Index < data.length - 1 ? prevState.Index + 1 : 0
+        index: prevState.index < data.length - 1 ? prevState.index + 1 : 0
       })
       )
     }
 
     render() {
-      const { Index } = this.state;
+      const { index } = this.state;
       const { ...props } = this.props;
-      const item = props.data ? props.data[Index] : null;
+      const item = props.data ? props.data[index] : null;
       return <WrappedComponent
         {...props}
         item={item}
         prev={this.slideLeft}
         next={this.slideRight}
-        index={Index}
+        index={index}
       />
     }
   }

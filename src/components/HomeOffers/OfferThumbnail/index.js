@@ -4,18 +4,18 @@ import './offer-thumbnail.scss';
 
 export default class OfferThumbnail extends React.Component {
   static propTypes = {
-    offer: PropTypes.object.isRequired,
-    currentPhotoIndex: PropTypes.number.isRequired,
+    src: PropTypes.any.isRequired,
+    title: PropTypes.string,
     onClick: PropTypes.func.isRequired
   }
 
 
 
   render() {
-    const { offer, currentPhotoIndex, onClick } = this.props;
+    const { src, title, onClick } = this.props;
     return (
       <div className="offer-thumbnail">
-        <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} onClick={onClick} />
+        <img src={src} alt={title} onClick={onClick} />
 
       </div >
     )

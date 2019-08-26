@@ -4,26 +4,26 @@ import OfferSlider from './OfferSlider';
 import OfferNavigationControls from './OfferNavigationControls';
 import OfferDetails from '../HomeOffers/OfferDetails';
 import OfferSliderMobile from './OfferSlider/OfferSliderMobile';
-import { Link } from 'gatsby';
 import Buttons from './Buttons';
 import NavigationBottom from './NavigationBottom';
-
+import PropTypes from 'prop-types';
 
 
 class HomeOffers extends React.Component {
+  static propTypes = {
+    offers: PropTypes.object.isRequired,
+
+  }
 
   constructor(props) {
     super(props)
     this.state = {
 
-      isDesctop: true,
-      currentOfferIndex: 0,
       isLargeScreen: true,
     }
 
 
-    this.navigatePreviouse = this.navigatePreviouse.bind(this);
-    this.navigateNext = this.navigateNext.bind(this);
+
     this.screenChange = this.screenChange.bind(this);
   }
 
@@ -33,7 +33,7 @@ class HomeOffers extends React.Component {
   }
 
   componentWillUnmount() {
-    this.removeEventListener("resize", this.screenChange);
+    window.removeEventListener("resize", this.screenChange);
   }
 
   screenChange() {
@@ -44,54 +44,19 @@ class HomeOffers extends React.Component {
     });
   };
 
-  navigatePreviouse() {
 
-    const { offers } = this.props;
-
-    this.setState(
-      (prevState) => {
-        if (prevState.currentOfferIndex > 0) {
-          return {
-            currentOfferIndex: prevState.currentOfferIndex - 1
-          }
-        } else {
-          return {
-            currentOfferIndex: offers.length - 1
-          }
-        }
-      }
-    )
-  }
-
-  navigateNext() {
-
-    const { offers } = this.props;
-
-    this.setState(
-      (prevState) => {
-        if (prevState.currentOfferIndex < offers.length - 1) {
-          return {
-            currentOfferIndex: prevState.currentOfferIndex + 1
-          }
-        } else {
-          return {
-            currentOfferIndex: 0
-          }
-        }
-      }
-    )
-  }
   render() {
 
     const { offers } = this.props;
-    const { isLargeScreen, currentOfferIndex } = this.state
+    const { isLargeScreen } = this.state
 
 
-    if (isLargeScreen) {
 
 
-      return (
-        <div className='home-offers'>
+
+    return (
+      <React.Fragment>
+        {isLargeScreen && <div className='home-offers'>
 
           <div className='home-offer-desctop'>
 
@@ -101,7 +66,7 @@ class HomeOffers extends React.Component {
 
               <div className='home-offer-desctop__image'>
 
-                <OfferSlider offer={offers[this.state.currentOfferIndex]} offers={offers} />
+                <OfferSlider data={offers} />
 
               </div>
 
@@ -112,7 +77,7 @@ class HomeOffers extends React.Component {
                 />
 
 
-                <OfferDetails offer={offers[this.state.currentOfferIndex]} />
+                <OfferDetails item={item} />
 
                 <NavigationBottom />
 
@@ -121,16 +86,14 @@ class HomeOffers extends React.Component {
             </div>
           </div>
 
-        </div>
-      );
-    } else {
-      return (
-        <div className='home-offers'>
+        </div>}
+        {!isLargeScreen && <div className='home-offers'>
           <OfferSliderMobile
-            offers={offers} navigatePreviouse={this.navigatePreviouse} navigateNext={this.navigateNext} currentOfferIndex={currentOfferIndex} />
-        </div>
-      );
-    }
+            data={offers} />
+        </div>}
+      </React.Fragment>
+
+    );
   }
 }
 export default HomeOffers;

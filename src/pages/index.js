@@ -40,7 +40,7 @@ const IndexPage = () => (
 
     <div className='container' id="home-offers">
       <Headline title="Biura" />
-      <HomeOffers offers={offers} />
+      <HomeOffers data={offers} />
     </div>
 
 

@@ -3,29 +3,33 @@ import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import PropTypes from 'prop-types';
 import './preview.scss';
+import withCarousell from '../../hocComponents/withCarousell';
 
-export default class OfferPreview extends React.Component {
+class OfferPreview extends React.Component {
   static propTypes = {
-    offer: PropTypes.object.isRequired,
-    currentPhotoIndex: PropTypes.number.isRequired,
-    slideLeft: PropTypes.func.isRequired,
-    slideRight: PropTypes.func.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    prev: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
+
   }
 
 
   render() {
-    const { offer, currentPhotoIndex, slideLeft, slideRight, onClick } = this.props;
+    const { item, index, prev, next, onClick } = this.props;
+    console.log({ item });
 
     return (
       <div className='preview-image'>
-        <img src={offer.photos[currentPhotoIndex].original} alt={offer.photos.title} onClick={onClick} />
+        <img src={item.photos[index].original} alt={item.photos.title} onClick={onClick} />
 
-        <ArrowLeft onClick={slideLeft} />
-        <ArrowRight onClick={slideRight} />
+        <ArrowLeft onClick={prev} />
+        <ArrowRight onClick={next} />
 
 
       </div >
     )
   }
 }
+export default withCarousell(OfferPreview);

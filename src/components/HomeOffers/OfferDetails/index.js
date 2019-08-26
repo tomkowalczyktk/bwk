@@ -1,47 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OfferDetail from '../OfferDetail';
-import './offer-details-textbox.scss';
+import './item-details-textbox.scss';
 
 export default class OfferDetails extends React.Component {
   static propTypes = {
-    offer: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired
   }
 
   render() {
-    const { offer } = this.props;
+    const { item } = this.props;
 
     return (
-      <div className='offer-details-textbox'>
+      <div className='item-details-textbox'>
 
         <OfferDetail
           label="Powierzchnia"
-          value={offer.area}
+          value={item.area}
           unit="m2"
         />
         <OfferDetail
           label="Cena"
-          value={offer.price}
+          value={item.price}
           unit="zł"
         />
         <OfferDetail
           label="Ulica"
-          value={offer.street}
+          value={item.street}
           unit=""
         />
         <OfferDetail
           label="Piętro"
-          value={offer.floor}
+          value={item.floor}
           unit=""
         />
         <OfferDetail
           label="Szybki internet"
-          value={offer.internet}
+          value={item.internet}
           unit="boolean"
         />
         <OfferDetail
           label="Kącik socjalny"
-          value={offer.social}
+          value={item.social}
           unit="boolean"
         />
       </div>

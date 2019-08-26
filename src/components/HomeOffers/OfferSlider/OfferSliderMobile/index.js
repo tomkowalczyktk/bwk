@@ -7,23 +7,23 @@ import './offer-mobile.scss';
 
 export default class OfferSliderMobile extends React.Component {
   static propTypes = {
-    offers: PropTypes.array.isRequired,
-    currentOfferIndex: PropTypes.number.isRequired,
-    navigatePreviouse: PropTypes.func.isRequired,
-    navigateNext: PropTypes.func.isRequired
+    item: PropTypes.array.isRequired,
+    index: PropTypes.number.isRequired,
+    prev: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired
   }
 
   render() {
 
-    const { offers, currentOfferIndex, navigatePreviouse, navigateNext } = this.props;
+    const { item, index, prev, next } = this.props;
     return (
       <div className='offer-mobile'>
-        <img className='offer-mobile__img' src={offers[currentOfferIndex].photos[0].original} alt={offers[currentOfferIndex].photos[0].title} />
-        <div className='offer-mobile__price'><p>{offers[currentOfferIndex].price}zł</p></div>
-        <p className='offer-mobile__description'>Powierzchnia: <span>{offers[currentOfferIndex].area}m<sup>2</sup></span></p>
-        <p className='offer-mobile__description'>Ulica: <span>{offers[currentOfferIndex].street}</span></p>
+        <img className='offer-mobile__img' src={item.photos[index].original} alt={item.photos.title} />
+        <div className='offer-mobile__price'><p>{item[index].price}zł</p></div>
+        <p className='offer-mobile__description'>Powierzchnia: <span>{item[index].area}m<sup>2</sup></span></p>
+        <p className='offer-mobile__description'>Ulica: <span>{item[index].street}</span></p>
         <OfferNavigationMobile
-          navigatePreviouse={navigatePreviouse} navigateNext={navigateNext} />
+          navigatePreviouse={prev} navigateNext={next} />
 
       </div>
 

@@ -2,9 +2,7 @@ import React from 'react';
 import withCarousell from './hocComponents/withCarousell';
 
 const TestSlider = (props) => {
-  console.log({ ...props });
 
-  console.log({ item });
   const { item, prev, next } = props;
 
   return (
