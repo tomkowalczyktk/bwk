@@ -19,6 +19,8 @@
       display: flex;
       width: 40%;
       min-height: 500px;
+      flex-direction: column;
+      align-content: space-between;
 
       &__frame {
         margin: 0 0 0 20px;
