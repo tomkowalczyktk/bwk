@@ -33,6 +33,7 @@ class HomeOffers extends React.Component {
   }
 
   componentWillUnmount() {
+
     window.removeEventListener("resize", this.screenChange);
   }
 

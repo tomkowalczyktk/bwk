@@ -19,45 +19,48 @@
   }
   &__arrow-left {
     position: absolute;
+    font-size: 120px;
     cursor: pointer;
     padding: 20px;
     top: 50%;
-    left: 50px;
+    left: 20px;
     transform: translate(50%, -50%);
     fill: white;
+    color: white;
     z-index: 1010;
     &:hover {
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px 5px white;
+      filter: drop-shadow(2px 2px 20px white) drop-shadow(2px -2px 20px white) drop-shadow(-2px 2px 20px white)
+        drop-shadow(-2px -2px 20px white);
     }
   }
   &__arrow-right {
     position: absolute;
+    font-size: 120px;
     cursor: pointer;
     padding: 20px;
     top: 50%;
-    right: 50px;
+    right: 20px;
     transform: translate(-50%, -50%);
     fill: white;
+    color: white;
     z-index: 1010;
     &:hover {
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px 5px white;
+      filter: drop-shadow(2px 2px 20px white) drop-shadow(2px -2px 20px white) drop-shadow(-2px 2px 20px white)
+        drop-shadow(-2px -2px 20px white);
     }
   }
   &__close-button {
-    width: 90px;
-    height: 90px;
+    font-size: 100px;
     position: absolute;
     cursor: pointer;
     padding: 20px;
     top: 5%;
     right: 50px;
-    fill: white;
+    color: white;
     z-index: 1010;
     &:hover {
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px 5px white;
+      filter: drop-shadow(2px 2px 20px white) drop-shadow(2px -2px 20px white) drop-shadow(-2px 2px 20px white)
+        drop-shadow(-2px -2px 20px white);
     }
   }
 }
