@@ -7,11 +7,7 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }

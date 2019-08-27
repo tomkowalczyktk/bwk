@@ -6,8 +6,6 @@ import withCarousell from '../../hocComponents/withCarousell';
 class OfferSlider extends Component {
   static propTypes = {
     item: PropTypes.object.isRequired,
-    prev: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -30,6 +28,7 @@ class OfferSlider extends Component {
     const { item, } = this.props;
 
     const { isFullScreen } = this.state;
+    console.log('item', item.photos[0].original);
     return (
       <div>
         <OfferThumbnail
@@ -48,4 +47,4 @@ class OfferSlider extends Component {
 }
 
 
-export default withCarousell(OfferSlider);
+export default OfferSlider;

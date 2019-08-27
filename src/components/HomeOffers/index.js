@@ -7,12 +7,15 @@ import OfferSliderMobile from './OfferSlider/OfferSliderMobile';
 import Buttons from './Buttons';
 import NavigationBottom from './NavigationBottom';
 import PropTypes from 'prop-types';
+import withCarousell from '../hocComponents/withCarousell';
 
 
 class HomeOffers extends React.Component {
   static propTypes = {
-    offers: PropTypes.object.isRequired,
-
+    data: PropTypes.array.isRequired,
+    prev: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired,
   }
 
   constructor(props) {
@@ -21,9 +24,6 @@ class HomeOffers extends React.Component {
 
       isLargeScreen: true,
     }
-
-
-
     this.screenChange = this.screenChange.bind(this);
   }
 
@@ -47,7 +47,7 @@ class HomeOffers extends React.Component {
 
   render() {
 
-    const { offers } = this.props;
+    const { data, item, prev, next, index } = this.props;
     const { isLargeScreen } = this.state
 
 
@@ -66,21 +66,24 @@ class HomeOffers extends React.Component {
 
               <div className='home-offer-desctop__image'>
 
-                <OfferSlider data={offers} />
+                <OfferSlider item={item}
+                />
 
               </div>
 
               <div className='home-offer-desctop__details'>
+                <div className='home-offer-desctop__details__frame'>
+                  <OfferNavigationControls
+                    data={data}
+                    prev={prev}
+                    next={next}
+                    index={index}
+                  />
 
-                <OfferNavigationControls
-                  data={offers}
-                />
+                  <OfferDetails item={item} />
 
-
-                <OfferDetails item={item} />
-
-                <NavigationBottom />
-
+                  <NavigationBottom />
+                </div>
               </div>
 
             </div>
@@ -89,11 +92,11 @@ class HomeOffers extends React.Component {
         </div>}
         {!isLargeScreen && <div className='home-offers'>
           <OfferSliderMobile
-            data={offers} />
+            data={data} />
         </div>}
       </React.Fragment>
 
     );
   }
 }
-export default HomeOffers;
+export default withCarousell(HomeOffers);

@@ -12,15 +12,23 @@
 
     &__image {
       width: 60%;
-      height: 460px;
+      display: flex;
     }
 
     &__details {
-      margin: 0 0 0 20px;
+      display: flex;
       width: 40%;
-      height: 500px;
-      display: block;
-      object-fit: contain;
+      min-height: 500px;
+
+      &__frame {
+        margin: 0 0 0 20px;
+        display: block;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      // display: block;
+      // object-fit: contain;
     }
   }
 }
