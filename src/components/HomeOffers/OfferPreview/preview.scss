@@ -45,4 +45,19 @@
       box-shadow: 0px 0px 10px 5px white;
     }
   }
+  &__close-button {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    cursor: pointer;
+    padding: 20px;
+    top: 5%;
+    right: 50px;
+    fill: white;
+    z-index: 1010;
+    &:hover {
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px 5px white;
+    }
+  }
 }

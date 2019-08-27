@@ -30,7 +30,8 @@ class OfferSlider extends Component {
     const { isFullScreen } = this.state;
     console.log('item', item.photos[0].original);
     return (
-      <div>
+
+      <React.Fragment>
         <OfferThumbnail
           src={item.photos[0].original}
           title={item.photos[0].title}
@@ -40,7 +41,9 @@ class OfferSlider extends Component {
           data={item.photos}
           onClick={this.previewToggle}
         />}
-      </div>
+      </React.Fragment>
+
+
     )
 
   }

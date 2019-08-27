@@ -4,6 +4,7 @@ import ArrowRight from './ArrowRight';
 import PropTypes from 'prop-types';
 import './preview.scss';
 import withCarousell from '../../hocComponents/withCarousell';
+import CloseButton from './CloseButton';
 
 class OfferPreview extends React.Component {
   static propTypes = {
@@ -11,22 +12,22 @@ class OfferPreview extends React.Component {
     prev: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired,
     item: PropTypes.object.isRequired,
-    index: PropTypes.number.isRequired,
 
   }
 
 
   render() {
-    const { item, index, prev, next, onClick } = this.props;
+    const { item, prev, next, onClick } = this.props;
     console.log({ item });
+
 
     return (
       <div className='preview-image'>
-        <img src={item.photos[index].original} alt={item.photos.title} onClick={onClick} />
+        <img src={item.original} alt={item.title} onClick={onClick} />
 
         <ArrowLeft onClick={prev} />
         <ArrowRight onClick={next} />
-
+        <CloseButton onClick={onClick} />
 
       </div >
     )

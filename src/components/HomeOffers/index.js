@@ -82,8 +82,8 @@ class HomeOffers extends React.Component {
 
                   <OfferDetails item={item} />
 
-                  <NavigationBottom />
                 </div>
+                <NavigationBottom />
               </div>
 
             </div>
