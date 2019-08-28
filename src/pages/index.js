@@ -49,11 +49,6 @@ const IndexPage = () => (
       <Testimonials testimonials={testimonials} />
     </div>
 
-
-    <div className='container'>
-      <TestSlider data={offers[0].photos} />
-      <TestButton text="test button" />
-    </div>
     <div id="contact">
       <Footer />
     </div>

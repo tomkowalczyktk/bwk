@@ -39,7 +39,7 @@ class HomeOffers extends React.Component {
 
   screenChange() {
     this.setState({
-      isLargeScreen: window.innerWidth > 800,
+      isLargeScreen: window.innerWidth > 800
 
 
     });
