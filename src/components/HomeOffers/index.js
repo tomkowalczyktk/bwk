@@ -45,15 +45,10 @@ class HomeOffers extends React.Component {
     });
   };
 
-
   render() {
 
     const { data, item, prev, next, index } = this.props;
     const { isLargeScreen } = this.state
-
-
-
-
 
     return (
       <React.Fragment>
@@ -84,7 +79,8 @@ class HomeOffers extends React.Component {
                   <OfferDetails item={item} />
 
                 </div>
-                <NavigationBottom />
+                <NavigationBottom item={item} />
+
               </div>
 
             </div>

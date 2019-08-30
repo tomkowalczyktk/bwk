@@ -10,8 +10,7 @@ import Testimonials from '../components/Testimonials';
 import { testimonials, offers } from '../source';
 import Footer from '../components/Footer';
 import HomeOffers from '../components/HomeOffers';
-import TestButton from '../components/TestButton';
-import TestSlider from '../components/TestSlider';
+import SlidyToggle from '../components/SlidyToggle';
 
 
 const IndexPage = () => (
@@ -47,6 +46,9 @@ const IndexPage = () => (
     <div className='container' id="testimonials">
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
+    </div>
+    <div className='container'>
+      <SlidyToggle />
     </div>
 
     <div id="contact">

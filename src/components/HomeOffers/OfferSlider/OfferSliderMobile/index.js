@@ -14,7 +14,7 @@ class OfferSliderMobile extends React.Component {
   render() {
 
     const { item, prev, next } = this.props;
-    console.log("props", { item, prev, next });
+
     return (
       <div className='offer-mobile'>
         <div className='offer-mobile__img'>

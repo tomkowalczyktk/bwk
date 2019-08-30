@@ -15,11 +15,8 @@ class OfferPreview extends React.Component {
 
   }
 
-
   render() {
     const { item, prev, next, onClick } = this.props;
-    console.log({ item });
-
 
     return (
       <div className='preview-image'>
