@@ -7,11 +7,13 @@ import keyImage from '../images/key.png';
 import Headline from '../components/Headline';
 import AdvantageSection from '../components/AdvantageSection';
 import Testimonials from '../components/Testimonials';
-import { testimonials } from '../source';
+import { testimonials, offers } from '../source';
 import Footer from '../components/Footer';
+import HomeOffers from '../components/HomeOffers';
+
 
 const IndexPage = () => (
-  <main>
+  < main >
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
 
 
@@ -28,33 +30,29 @@ const IndexPage = () => (
     </Header>
 
 
-
     <div className='container' id="advantages">
-
-
       <Headline title="Korzyści" />
       <AdvantageSection />
-
-
     </div>
 
-    <div className='container' id="testimonials">
 
+    <div className='container' id="home-offers">
+      <Headline title="Biura" />
+      <HomeOffers data={offers} />
+    </div>
+
+
+    <div className='container' id="testimonials">
       <Headline title='Referencje' />
       <Testimonials testimonials={testimonials} />
     </div>
+
+
     <div id="contact">
-      <Footer
-
-        name='Biuro w Kamienicy'
-        address='ul. Lipowa 4a, 20-420 Lublin'
-        email='huber-kamienicznik@bwk.com'
-        nip='725-18-01-126'
-        krs='0000045146'
-
-      />
+      <Footer />
     </div>
-  </main>
+  </main >
 
 );
-export default IndexPage
+
+export default IndexPage;

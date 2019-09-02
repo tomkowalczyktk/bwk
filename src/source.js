@@ -1,9 +1,11 @@
 import sadowa from "./images/offers/1/sadowa.png";
-import sadowa2 from "./images/offers/1/sadowa2.png";
+import fullScreenSadowa from './images/offers/1/fullScreenSadowa.png';
 import chopina from "./images/offers/2/chopina.png";
+import fullScreenChopina from './images/offers/2/fullScreenChopina.png';
 import lipowa from "./images/offers/3/lipowa.png";
+import fullScreenLipowa from "./images/offers/3/fullScreenLipowa.png";
 import okopowa from "./images/offers/4/okopowa.png";
-
+import fullScreenOkopowa from './images/offers/4/fullScreenOkopowa.png';
 import marzena from "./images/testimonials/1/marzena.png";
 import piotr from "./images/testimonials/2/piotr.png";
 import mietek from "./images/testimonials/3/piotr.png";
@@ -14,7 +16,24 @@ export const offers = [
     "id": 1,
     "street": "Sądowa",
     "mainPhoto": sadowa,
-    "photos": [sadowa, sadowa2],
+    "photos": [
+      {
+        "title": "office",
+        "original": sadowa,
+        "fullScreen": fullScreenSadowa,
+      },
+      {
+        "title": "office2",
+        "original": lipowa,
+        "fullScreen": fullScreenLipowa
+      },
+      {
+        "title": "office3",
+        "original": chopina,
+        "fullScreen": fullScreenChopina,
+      }
+    ],
+
     "area": "20",
     "price": "1300",
     "floor": "1",
@@ -25,9 +44,15 @@ export const offers = [
     "id": 2,
     "street": "Chopina",
     "mainPhoto": chopina,
-    "photos": [chopina],
-    "area": "20",
-    "price": "1300",
+    "photos": [
+      {
+        "title": "office",
+        "original": chopina,
+        "fullScreen": fullScreenChopina
+      }
+    ],
+    "area": "21",
+    "price": "1400",
     "floor": "1",
     "internet": true,
     "social": true
@@ -36,9 +61,15 @@ export const offers = [
     "id": 3,
     "street": "Lipowa",
     "mainPhoto": lipowa,
-    "photos": [lipowa],
-    "area": "20",
-    "price": "1300",
+    "photos": [
+      {
+        "title": "office",
+        "original": lipowa,
+        "fullScreen": fullScreenLipowa
+      }
+    ],
+    "area": "27",
+    "price": "2000",
     "floor": "1",
     "internet": true,
     "social": true
@@ -47,9 +78,15 @@ export const offers = [
     "id": 4,
     "street": "Okopowa",
     "mainPhoto": okopowa,
-    "photos": [okopowa],
-    "area": "20",
-    "price": "1300",
+    "photos": [
+      {
+        "title": "office",
+        "original": okopowa,
+        "fullScreen": fullScreenOkopowa
+      }
+    ],
+    "area": "21",
+    "price": "1500",
     "floor": "1",
     "internet": true,
     "social": true

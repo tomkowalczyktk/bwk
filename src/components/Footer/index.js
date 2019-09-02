@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { offers } from '../../source';
 
 
-const Footer = ({ name, address, email, nip, krs }) => {
+const Footer = () => {
   return (
     <footer className='footer'>
       <div className='container'>
@@ -33,11 +33,11 @@ const Footer = ({ name, address, email, nip, krs }) => {
         </div>
         <div className='footer__contact'>
           <h4>Kontakt</h4>
-          <p>{name}</p>
-          <p>{address}</p>
-          <p><a href={email}>{email}</a></p>
-          <p>NIP: {nip}</p>
-          <p>KRS: {krs}</p>
+          <p>Biuro w Kamienicy</p>
+          <p>ul. Lipowa 4a, 20-420 Lublin</p>
+          <p><a href="mailto:hubert@bwk.pl?Subject=Wynajem%20biura">hubert@bwk.pl</a></p>
+          <p>NIP: 725-18-01-126</p>
+          <p>KRS: 0000045146</p>
 
         </div>
       </div>

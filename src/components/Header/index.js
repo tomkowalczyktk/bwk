@@ -23,26 +23,26 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    this.removeEventListener("resize", this.screenChange);
+    window.removeEventListener("resize", this.screenChange);
   }
 
   screenChange() {
     this.setState({
       isLargeScreen: window.innerWidth > 800,
       displayMenu: window.innerWidth > 800
-      
+
     });
   };
 
   toggle() {
-    const {isLargeScreen}=this.state;
-    if(isLargeScreen){
+    const { isLargeScreen } = this.state;
+    if (isLargeScreen) {
       return null;
     }
-  
+
     this.setState(prevState => ({
-      
-        displayMenu :!prevState.displayMenu
+
+      displayMenu: !prevState.displayMenu
     }
     ));
   }
@@ -59,7 +59,7 @@ class Header extends React.Component {
           <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
             <Link to="/"><img src={logo} className="header__top__logo" alt="Logo" /></Link>
             <div className="header__top__nav">
-              {displayMenu && <HeaderNavBar onClick={this.toggle}/>}
+              {displayMenu && <HeaderNavBar onClick={this.toggle} />}
               < Burger onClick={this.toggle} />
             </div>
 

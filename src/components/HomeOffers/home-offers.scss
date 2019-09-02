@@ -1,0 +1,28 @@
+.home-offers {
+  .home-offer-desctop {
+    &__row-details {
+      display: flex;
+      margin-top: 40px;
+    }
+
+    &__image {
+      width: 60%;
+      display: flex;
+    }
+
+    &__details {
+      display: flex;
+      width: 40%;
+      margin-left: 20px;
+      min-height: 500px;
+      flex-direction: column;
+      align-content: space-between;
+
+      &__frame {
+        display: block;
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+  }
+}
