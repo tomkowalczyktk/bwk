@@ -51,7 +51,8 @@ class HomeOffers extends React.Component {
     const { isLargeScreen } = this.state
 
     return (
-      <React.Fragment>
+      <React.Fragment>    // console.log("data in Home Offers", { data })
+
         {isLargeScreen && <div className='home-offers'>
 
           <div className='home-offer-desctop'>

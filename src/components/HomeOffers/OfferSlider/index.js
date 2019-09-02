@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import OfferThumbnail from '../OfferThumbnail';
 import OfferPreview from '../OfferPreview';
-import withCarousell from '../../hocComponents/withCarousell';
+
 class OfferSlider extends Component {
   static propTypes = {
     item: PropTypes.object.isRequired,

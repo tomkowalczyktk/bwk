@@ -12,18 +12,18 @@ class OfferPreview extends React.Component {
     prev: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired,
     item: PropTypes.object.isRequired,
-
+    data: PropTypes.array.isRequired,
   }
 
   render() {
-    const { item, prev, next, onClick } = this.props;
+    const { data, item, prev, next, onClick } = this.props;
 
     return (
       <div className='preview-image'>
         <img src={item.original} alt={item.title} onClick={onClick} />
 
-        <ArrowLeft onClick={prev} />
-        <ArrowRight onClick={next} />
+        {data.length > 1 && <ArrowLeft onClick={prev} />}
+        {data.length > 1 && <ArrowRight onClick={next} />}
         <CloseButton onClick={onClick} />
 
       </div >
