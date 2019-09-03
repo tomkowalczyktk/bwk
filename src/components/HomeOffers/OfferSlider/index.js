@@ -6,6 +6,7 @@ import OfferPreview from '../OfferPreview';
 class OfferSlider extends Component {
   static propTypes = {
     item: PropTypes.object.isRequired,
+
   }
 
   constructor(props) {

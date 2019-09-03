@@ -1,6 +1,5 @@
 import React from 'react';
 import './header-button.scss';
-import { Link } from 'gatsby';
 
 
 const HeaderButton = ({ image, text }) => {
