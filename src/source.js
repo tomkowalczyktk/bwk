@@ -38,7 +38,8 @@ export const offers = [
     "price": "1300",
     "floor": "1",
     "internet": true,
-    "social": true
+    "social": true,
+    "availableOn": "10/10/2019"
   },
   {
     "id": 2,
@@ -55,7 +56,9 @@ export const offers = [
     "price": "1400",
     "floor": "1",
     "internet": true,
-    "social": true
+    "social": true,
+    "availableOn": "10/10/2019"
+
   },
   {
     "id": 3,
@@ -72,7 +75,9 @@ export const offers = [
     "price": "2000",
     "floor": "1",
     "internet": true,
-    "social": true
+    "social": true,
+    "availableOn": "10/10/2019"
+
   },
   {
     "id": 4,
@@ -89,7 +94,9 @@ export const offers = [
     "price": "1500",
     "floor": "1",
     "internet": true,
-    "social": true
+    "social": true,
+    "availableOn": "10/10/2019"
+
   }
 ]
 
