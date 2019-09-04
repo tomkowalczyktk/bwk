@@ -1,36 +1,24 @@
-import sadowa from "./images/offers/1/sadowa.png";
-import fullScreenSadowa from './images/offers/1/fullScreenSadowa.png';
-import chopina from "./images/offers/2/chopina.png";
-import fullScreenChopina from './images/offers/2/fullScreenChopina.png';
-import lipowa from "./images/offers/3/lipowa.png";
-import fullScreenLipowa from "./images/offers/3/fullScreenLipowa.png";
-import okopowa from "./images/offers/4/okopowa.png";
-import fullScreenOkopowa from './images/offers/4/fullScreenOkopowa.png';
-import marzena from "./images/testimonials/1/marzena.png";
-import piotr from "./images/testimonials/2/piotr.png";
-import mietek from "./images/testimonials/3/piotr.png";
-import grazyna from "./images/testimonials/4/marzena.png";
 
-export const offers = [
+exports.offers = [
   {
     "id": 1,
     "street": "Sądowa",
-    "mainPhoto": sadowa,
+    "mainPhoto": '/images/offers/1/sadowa.png',
     "photos": [
       {
         "title": "office",
-        "original": sadowa,
-        "fullScreen": fullScreenSadowa,
+        "original": '/images/offers/1/sadowa.png',
+        "fullScreen": '/images/offers/1/fullScreenSadowa.png',
       },
       {
         "title": "office2",
-        "original": lipowa,
-        "fullScreen": fullScreenLipowa
+        "original": '/images/offers/3/lipowa.png',
+        "fullScreen": "/images/offers/3/fullScreenLipowa.png"
       },
       {
         "title": "office3",
-        "original": chopina,
-        "fullScreen": fullScreenChopina,
+        "original": '/images/offers/2/chopina.png',
+        "fullScreen": '/images/offers/2/fullScreenChopina.png',
       }
     ],
 
@@ -44,12 +32,12 @@ export const offers = [
   {
     "id": 2,
     "street": "Chopina",
-    "mainPhoto": chopina,
+    "mainPhoto": '/images/offers/2/chopina.png',
     "photos": [
       {
         "title": "office",
-        "original": chopina,
-        "fullScreen": fullScreenChopina
+        "original": '/images/offers/2/chopina.png',
+        "fullScreen": '/images/offers/2/fullScreenChopina.png'
       }
     ],
     "area": "21",
@@ -63,12 +51,12 @@ export const offers = [
   {
     "id": 3,
     "street": "Lipowa",
-    "mainPhoto": lipowa,
+    "mainPhoto": "/images/offers/3/lipowa.png",
     "photos": [
       {
         "title": "office",
-        "original": lipowa,
-        "fullScreen": fullScreenLipowa
+        "original": "/images/offers/3/lipowa.png",
+        "fullScreen": "/images/offers/3/fullScreenLipowa.png"
       }
     ],
     "area": "27",
@@ -82,12 +70,12 @@ export const offers = [
   {
     "id": 4,
     "street": "Okopowa",
-    "mainPhoto": okopowa,
+    "mainPhoto": "/images/offers/4/okopowa.png",
     "photos": [
       {
         "title": "office",
-        "original": okopowa,
-        "fullScreen": fullScreenOkopowa
+        "original": "/images/offers/4/okopowa.png",
+        "fullScreen": '/images/offers/4/fullScreenOkopowa.png'
       }
     ],
     "area": "21",
@@ -100,29 +88,29 @@ export const offers = [
   }
 ]
 
-export const testimonials = [
+exports.testimonials = [
   {
     "id": 1,
     "name": "Marzena",
-    "image": marzena,
+    "image": "/images/testimonials/1/marzena.png",
     "content": "Jestem bardzo zadowolona ze współpracy z BwK. Proces wynajmu oraz obsługi przebiegł bez zarzutu. Szczerze polecam."
   },
   {
     "id": 2,
     "name": "Piotr",
-    "image": piotr,
+    "image": "/images/testimonials/2/piotr.png",
     "content": "Biuro w Kamienicy to rewelacyjne rozwiązanie dla naszej firmy. Rewelacyjna obsługa, elastyczność i relatywnie niski koszt. Super oferta, polecam."
   },
   {
     "id": 3,
     "name": "Mieczysław",
-    "image": mietek,
+    "image": "/images/testimonials/3/piotr.png",
     "content": "Polecam tym wszystkim, którzy potrzebują reprezentatywnego lokalu w centrum miasta. Rewelacyjne rozwiązanie, niewymagające angażowania dużych śro dków finansowych oraz czasu. Profesjonalna obsługa, oszczędność czasu i pieniędzy."
   },
   {
     "id": 4,
     "name": "Grażyna",
-    "image": grazyna,
+    "image": "/images/testimonials/4/grazyna.png",
     "content": "Bardzo wygodne i przyjemne miejsce. Minimum formalności, pełny profesjonalizm i wygoda."
   }
 ]
