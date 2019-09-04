@@ -8,13 +8,14 @@ import '../components/Headline/headline.scss';
 import classnames from 'classnames';
 import Footer from '../components/Footer';
 import { offers } from '../source';
+import OfferFooter from '../components/Offer/OfferFooter';
 
 const OfferPage = () => {
   const offer = offers.find(item => item.id === 1);
   const id = 1;
   return (
     <main>
-      <Header className="header header--offer-page">
+      <Header className={classnames("header header--offer-page")}>
 
         <HeaderHeadline className={classnames("header-headline header-headline--offer-page")}
           text={`Lokal przy ulicy ${offers[id].street}`}
@@ -28,6 +29,10 @@ const OfferPage = () => {
       <div className='container'>
         <Offer {...offer} />
       </div>
+
+
+      <OfferFooter />
+
 
       <div id="contact">
         <Footer />

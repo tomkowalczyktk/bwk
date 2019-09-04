@@ -1,7 +1,6 @@
 import React from 'react';
 import './offer.scss';
-import HeaderButton from '../HeaderButton';
-import keyImage from '../../images/key.png';
+import RentButton from './RentButton';
 
 const Offer = ({ id, area, street, internet, price, floor, social, availableOn, photos }) => {
   return (
@@ -25,7 +24,8 @@ const Offer = ({ id, area, street, internet, price, floor, social, availableOn, 
       <div className='offer__gallery'>
         {photos.map(photo => (<img src={photo.original} />))}
       </div>
-      <HeaderButton text="wynajmij lokal" image={keyImage} style={{ backgroundColor: "black", color: "white" }} />
+      <RentButton anchor={"#"} text="wynajmij lokal" />
+
     </div >
   );
 }
