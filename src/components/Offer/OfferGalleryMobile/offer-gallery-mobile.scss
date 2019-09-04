@@ -1,0 +1,58 @@
+.offer-gallery-mobile {
+  position: relative;
+  &__img {
+    width: 100%;
+    margin: 0 0 30px 0;
+    position: relative;
+    padding-top: 56.25%;
+    &::after {
+      content: "";
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  &__arrow-left {
+    position: absolute;
+    font-size: 100px;
+    cursor: pointer;
+    padding: 20px;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    fill: white;
+    color: white;
+    filter: drop-shadow(0px 0px 6px black);
+    &:hover {
+      filter: drop-shadow(0px 0px 10px black);
+    }
+  }
+  &__arrow-right {
+    position: absolute;
+    font-size: 100px;
+    cursor: pointer;
+    padding: 20px;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    fill: white;
+    color: white;
+    filter: drop-shadow(0px 0px 6px black);
+    &:hover {
+      filter: drop-shadow(0px 0px 10px black);
+    }
+  }
+}

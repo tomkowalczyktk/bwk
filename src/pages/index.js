@@ -17,10 +17,11 @@ const IndexPage = () => (
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
 
 
-    <Header >
+    <Header isOfferPage={false}>
 
       <HeaderHeadline
         text="Udogonienia biurowca w prestiżowej kamienicy w centrum miasta."
+        isOfferPage={false}
       />
       <HeaderButton
         image={keyImage}

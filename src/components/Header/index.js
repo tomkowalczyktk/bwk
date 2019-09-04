@@ -5,8 +5,12 @@ import HeaderNavBar from './HeaderNavBar';
 import Burger from './Burger';
 import './header.scss';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
+  static propTypes = {
+    isOfferPage: PropTypes.bool.isRequired
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -50,11 +54,12 @@ class Header extends React.Component {
 
   render() {
     const { displayMenu } = this.state;
-    const { children } = this.props;
+    const { children, isOfferPage } = this.props;
 
+    const headerContainerStyles = classnames("container container--header", { "container--header--offer-page": isOfferPage });
     return (
       <header className="header">
-        <div className="container container--header">
+        <div className={headerContainerStyles}>
 
           <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
             <Link to="/"><img src={logo} className="header__top__logo" alt="Logo" /></Link>

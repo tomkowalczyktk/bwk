@@ -8,15 +8,13 @@
   background-position: top left;
   background-size: cover;
 
-  &--offer-page {
-    .container--header {
-      padding-bottom: 100px;
-    }
-  }
   .container--header {
     padding-bottom: 350px;
 
     @media all and(max-width:800px) {
+      padding-bottom: 100px;
+    }
+    &--offer-page {
       padding-bottom: 100px;
     }
   }

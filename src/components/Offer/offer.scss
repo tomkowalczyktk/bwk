@@ -1,8 +1,4 @@
 .offer {
-  @media all and(max-width:800px) {
-    display: flex;
-    flex-direction: column;
-  }
   .offer-details {
     display: flex;
     &__column {
@@ -20,6 +16,30 @@
       &--right {
         p {
           padding-left: 200px;
+        }
+      }
+    }
+    @media all and(max-width:800px) {
+      flex-direction: column;
+      &__column {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          display: inline-flex;
+          align-content: space-between;
+          padding: 5px 0;
+        }
+        span {
+          margin-right: 0;
+          margin-left: auto;
+        }
+        &--right {
+          p {
+            padding-left: 0;
+          }
         }
       }
     }

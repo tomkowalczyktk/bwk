@@ -6,7 +6,7 @@ const HeaderButton = ({ image, text }) => {
   return (
     <div className="header-button-row">
       <a className="header-button" href="#offers">
-        <img src={image}></img>
+        <img src={image} alt="key"></img>
         {text}
       </a>
     </div>

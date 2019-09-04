@@ -16,16 +16,17 @@ export default ({ pageContext: { offer } }) => (
 
 
   <main>
-    <Header className={classnames("header header--offer-page")}>
+    <Header isOfferPage={true}>
 
-      <HeaderHeadline className={classnames("header-headline header-headline--offer-page")}
-        text={`Lokal przy ulicy ${offers.street}`}
+      <HeaderHeadline
+        text={`Lokal przy ulicy ${offer.street}`}
+        isOfferPage={true}
       />
       <HeaderOfferBtn
         text='Zobacz zdjęcia'
       />
 
-    </Header>
+    </Header >
 
     <div className='container'>
       <Offer {...offer} />
