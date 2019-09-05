@@ -1,5 +1,8 @@
 .header-offer-btn-row {
   text-align: center;
+  @media all and(max-width: 800px) {
+    display: none;
+  }
 }
 .header-offer-btn {
   text-align: center;
