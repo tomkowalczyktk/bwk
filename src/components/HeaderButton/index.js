@@ -1,13 +1,12 @@
 import React from 'react';
 import './header-button.scss';
-import { Link } from 'gatsby';
 
 
 const HeaderButton = ({ image, text }) => {
   return (
     <div className="header-button-row">
-      <a className="header-button" to="#offers">
-        <img src={image}></img>
+      <a className="header-button" href="#offers">
+        <img src={image} alt="key"></img>
         {text}
       </a>
     </div>

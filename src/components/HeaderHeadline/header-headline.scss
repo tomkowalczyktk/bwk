@@ -8,5 +8,17 @@
   @media all and(max-width:900px) {
     width: 100%;
     padding-top: 100px;
+    font-size: 36;
+  }
+  &--offer-page {
+    padding: 40px 0 42px 0;
+    @media all and(max-width:900px) {
+      width: 100%;
+      padding: 40px 0 30px 0;
+    }
+    @media all and(max-width:900px) {
+      font-size: 34px;
+      margin-left: 5px;
+    }
   }
 }
