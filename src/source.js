@@ -27,7 +27,7 @@ exports.offers = [
     "floor": "1",
     "internet": true,
     "social": true,
-    "availableOn": "10/10/2019"
+    "availableOn": "2019-11-23"
   },
   {
     "id": 2,
@@ -45,7 +45,7 @@ exports.offers = [
     "floor": "1",
     "internet": true,
     "social": true,
-    "availableOn": "10/10/2019"
+    "availableOn": "2019-11-06"
 
   },
   {
@@ -64,7 +64,7 @@ exports.offers = [
     "floor": "1",
     "internet": true,
     "social": true,
-    "availableOn": "10/10/2019"
+    "availableOn": "2019-10-21"
 
   },
   {
@@ -83,7 +83,7 @@ exports.offers = [
     "floor": "1",
     "internet": true,
     "social": true,
-    "availableOn": "10/10/2019"
+    "availableOn": "2019-10-16"
 
   }
 ]

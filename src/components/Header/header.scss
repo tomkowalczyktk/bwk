@@ -25,8 +25,9 @@
             top: 0;
             left: 0;
             right: 0;
+            padding: 20px 0;
             &__logo {
-              margin: 0 10px;
+              margin: 0 22px;
             }
           }
         }
@@ -51,6 +52,8 @@
     }
 
     &__logo {
+      width: 44px;
+      height: 44px;
       flex-grow: 0;
     }
     &__nav {
@@ -126,6 +129,7 @@
         @media all and(max-width:800px) {
           display: block;
           fill: white;
+          margin-right: 22px;
         }
       }
     }

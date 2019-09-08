@@ -32,7 +32,7 @@ export default ({ pageContext: { offer } }) => (
       isOfferPage={true}
     />
     <div className='container'>
-      <Offer {...offer} />
+      <Offer offer={offer} />
     </div>
 
 

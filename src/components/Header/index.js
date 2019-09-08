@@ -57,10 +57,16 @@ class Header extends React.Component {
     const { displayMenu, isLargeScreen } = this.state;
     const { children, isOfferPage } = this.props;
 
-    const headerContainerStyles = classnames("container container--header", { "container--header--offer-page": isOfferPage }, { "container--header--offer-page--mobile": isOfferPage && !isLargeScreen });
     return (
       <header className="header">
-        <div className={headerContainerStyles}>
+        <div className={
+          classnames(
+            "container container--header",
+            { "container--header--offer-page": isOfferPage },
+            { "container--header--offer-page--mobile": isOfferPage && !isLargeScreen }
+          )
+        }
+        >
 
           <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
 

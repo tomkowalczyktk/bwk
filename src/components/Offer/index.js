@@ -7,15 +7,18 @@ import OfferGalleryMobile from './OfferGalleryMobile';
 
 class Offer extends React.Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
-    area: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    floor: PropTypes.string.isRequired,
-    internet: PropTypes.bool.isRequired,
-    social: PropTypes.bool.isRequired,
-    street: PropTypes.string.isRequired,
-    availableOn: PropTypes.string.isRequired,
-    photos: PropTypes.array.isRequired
+    offer: PropTypes.shape(
+      {
+        id: PropTypes.number.isRequired,
+        area: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+        floor: PropTypes.string.isRequired,
+        internet: PropTypes.bool.isRequired,
+        social: PropTypes.bool.isRequired,
+        street: PropTypes.string.isRequired,
+        availableOn: PropTypes.string.isRequired,
+        photos: PropTypes.array.isRequired
+      })
   }
 
   constructor(props) {
@@ -46,10 +49,9 @@ class Offer extends React.Component {
 
   render() {
 
-    const { id, area, street, internet, price, floor, social, availableOn, photos } = this.props;
+    const { id, area, street, internet, price, floor, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen } = this.state;
-
-    console.log("data ph", { photos });
+    const avalaibleDate = new Date(availableOn);
     return (
       <div className="offer">
 
@@ -59,16 +61,17 @@ class Offer extends React.Component {
 
           <div className="offer-details__column">
             <p>Powierzchnia:<span>{`${area}m`}<sup>2</sup></span></p>
+            <p>Cena:<span>{`${price} (netto) zł`}</span></p>
             <p>Ulica:<span>{street}</span></p>
-            <p>Szybki internet:<span>{internet ? "Tak" : "Nie"}</span></p>
-            <p>Ilość biur w lokalu:<span>3</span></p>
           </div>
           {!isLargeScreen && <OfferGalleryMobile data={photos} />}
           <div className="offer-details__column offer-details__column--right">
-            <p>Cena:<span>{`${price} (netto) zł`}</span></p>
+
             <p>Piętro:<span>{floor}</span></p>
+            <p>Szybki internet:<span>{internet ? "Tak" : "Nie"}</span></p>
             <p>Kącik socjalny:<span>{social ? "Tak" : "Nie"}</span></p>
-            <p>Dostępny od:<span>{availableOn}</span></p>
+            <p>Ilość biur w lokalu:<span>3</span></p>
+            <p>Dostępny od:<span>{`${avalaibleDate.getDay()}.${avalaibleDate.getMonth()}.${avalaibleDate.getFullYear()}r.`}</span></p>
           </div>
 
         </div>

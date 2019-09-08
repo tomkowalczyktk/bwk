@@ -28,10 +28,12 @@ class OfferGalleryMobile extends React.Component {
 
 
 
-        {data.length > 1 && < FontAwesomeIcon icon={faChevronLeft} className='offer-gallery-mobile__arrow-left' onClick={prev} />}
+        {data.length > 1 &&
+          <React.Fragment>
+            < FontAwesomeIcon icon={faChevronLeft} className='offer-gallery-mobile__arrow-left' onClick={prev} />
 
-        {data.length > 1 && < FontAwesomeIcon icon={faChevronRight} className='offer-gallery-mobile__arrow-right' onClick={next} />}
-
+            < FontAwesomeIcon icon={faChevronRight} className='offer-gallery-mobile__arrow-right' onClick={next} />
+          </React.Fragment>}
       </div >
     )
   }
