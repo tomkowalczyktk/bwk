@@ -3,6 +3,7 @@ exports.offers = [
   {
     "id": 1,
     "street": "Sądowa",
+    "city": "Lublin",
     "mainPhoto": '/images/offers/1/sadowa.png',
     "photos": [
       {
@@ -32,6 +33,7 @@ exports.offers = [
   {
     "id": 2,
     "street": "Chopina",
+    "city": "Lublin",
     "mainPhoto": '/images/offers/2/chopina.png',
     "photos": [
       {
@@ -51,6 +53,7 @@ exports.offers = [
   {
     "id": 3,
     "street": "Lipowa",
+    "city": "Lublin",
     "mainPhoto": "/images/offers/3/lipowa.png",
     "photos": [
       {
@@ -60,7 +63,7 @@ exports.offers = [
       }
     ],
     "area": "27",
-    "price": "2000",
+    "price": "20000",
     "floor": "1",
     "internet": true,
     "social": true,
@@ -70,6 +73,7 @@ exports.offers = [
   {
     "id": 4,
     "street": "Okopowa",
+    "city": "Lublin",
     "mainPhoto": "/images/offers/4/okopowa.png",
     "photos": [
       {

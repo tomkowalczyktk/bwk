@@ -1,6 +1,7 @@
 import React from 'react';
 import './textbox.scss';
 import PropTypes, { bool, number, string } from 'prop-types';
+import AmountFormater from '../../AmountFormater';
 
 export default class OfferDetail extends React.Component {
   static propTypes = {
@@ -20,7 +21,7 @@ export default class OfferDetail extends React.Component {
         valueDisplayed = <span>{value}m<sup>2</sup></span>;
         break;
       case "zł":
-        valueDisplayed = <span>{value}zł</span>;
+        valueDisplayed = <span><AmountFormater>{value}</AmountFormater></span>;
         break;
       case "boolean":
         valueDisplayed = <span> {true ? "TAK" : "NIE"}</span>;

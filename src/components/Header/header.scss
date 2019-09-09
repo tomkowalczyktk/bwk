@@ -28,6 +28,8 @@
             padding: 20px 0;
             &__logo {
               margin: 0 22px;
+              width: 44px;
+              height: 44px;
             }
           }
         }
@@ -52,8 +54,6 @@
     }
 
     &__logo {
-      width: 44px;
-      height: 44px;
       flex-grow: 0;
     }
     &__nav {
