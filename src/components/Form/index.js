@@ -62,13 +62,13 @@ class Form extends React.Component {
           <form onSubmit={this.handleSubmit} className="form">
             <span onClick={onClick}  >< FontAwesomeIcon icon={faTimes} /></span>
 
-            <label>{hasLabel}
+            <h4>{hasLabel}   </h4>
 
-              <input type="text" name="hasName" placeholder="Imię i nazwisko" value={hasName} onChange={this.handleChange} required />
-              <input type="text" name="hasPhoneNo" placeholder="Nr telefonu" value={hasPhoneNo} required onChange={this.handleChange} />
-              <input type="text" name="hasOfferAddress" placeholder={offerAddress} readOnly />
+            <input type="text" name="hasName" placeholder="Imię i nazwisko" value={hasName} onChange={this.handleChange} required />
+            <input type="text" name="hasPhoneNo" placeholder="Nr telefonu" value={hasPhoneNo} required onChange={this.handleChange} />
+            <input type="text" name="hasOfferAddress" placeholder={offerAddress} readOnly />
 
-            </label>
+
 
             <input type="submit" name="isSubmited" value="Wyślij" />
 
