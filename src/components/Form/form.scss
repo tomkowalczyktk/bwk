@@ -11,66 +11,79 @@
   &--hiden {
     display: none;
   }
-
-  .form {
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    border: 1px solid gray;
-    border-radius: 2px;
-    box-shadow: 0 0 10px 1px gray;
-
-    label {
-      font-size: 22px;
-      width: 100%;
-      text-align: center;
-      margin: 0;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-      display: block;
-      margin: 15px auto;
+  .container {
+    .form {
+      position: fixed;
+      top: 50px;
+      left: 50%;
+      transform: translate(-50%, 0);
       width: 90%;
-      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      background-color: white;
       border: 1px solid gray;
       border-radius: 2px;
-      color: black;
-      &::placeholder {
-        color: black;
+      box-shadow: 0 0 10px 1px gray;
+
+      label {
+        font-size: 38px;
+        width: 100%;
+        text-align: center;
+        margin: -45px 0 0 0;
+        @media all and(max-width:450px) {
+          font-size: 30px;
+          margin: -40px 0 0 0;
+        }
       }
-    }
-    input[type="number"] {
-      min-width: 11rem;
-    }
-    input[name="hasOfferAddress"] {
-      color: gray;
-    }
-    input[type="submit"] {
-      cursor: pointer;
-      margin: 0px 0 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 0.5rem 4rem;
-      color: white;
-      background-color: black;
-      border: 1px solid gray;
-    }
-    span {
-      cursor: pointer;
-      padding: 3px 6px 0px 6px;
-      color: white;
-      background-color: black;
-      margin: 5px 5px 0px auto;
-      border-radius: 5px;
+
+      input[type="text"] {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+        font-size: 14px;
+        padding: 1rem 2rem;
+        border: 1px solid gray;
+        border-radius: 2px;
+        color: black;
+        &::placeholder {
+          color: black;
+        }
+      }
+
+      input[name="hasOfferAddress"] {
+        &::placeholder {
+          color: gray;
+        }
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        margin: 0px 0 30px 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.5rem 4rem;
+        color: white;
+        background-color: black;
+        border: 1px solid gray;
+      }
+      span {
+        cursor: pointer;
+        padding: 0 10px;
+        color: white;
+        font-size: 27px;
+        background-color: black;
+        margin: 15px 15px 0px auto;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+        }
+        @media all and(max-width:450px) {
+          font-size: 22px;
+          padding: 1px 8px 0 8px;
+        }
+      }
     }
   }
 }

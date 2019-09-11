@@ -84,7 +84,7 @@ class Offer extends React.Component {
             <p>Szybki internet:<span>{internet ? "Tak" : "Nie"}</span></p>
             <p>Kącik socjalny:<span>{social ? "Tak" : "Nie"}</span></p>
             <p>Ilość biur w lokalu:<span>3</span></p>
-            <p>Dostępny od:<span><DateFormater>{avalaibleDate}</DateFormater></span></p>
+            <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{avalaibleDate}</DateFormater> rok</span></p>
           </div>
 
         </div>
