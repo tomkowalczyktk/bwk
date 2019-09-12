@@ -35,7 +35,7 @@
         margin: -45px 0 0 0;
         @media all and(max-width:450px) {
           font-size: 30px;
-          margin: -40px 0 0 0;
+          margin: -36px 0 0 0;
         }
       }
 
@@ -53,9 +53,12 @@
         }
       }
 
-      input[name="hasOfferAddress"] {
+      input[name="offerAddress"] {
         &::placeholder {
           color: gray;
+        }
+        input[name="offerId"] {
+          display: none;
         }
       }
       input[type="submit"] {

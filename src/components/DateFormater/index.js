@@ -17,6 +17,7 @@ export default class DateFormater extends Component {
     } else if (typeof children === "undefined" || children === null || children === '') {
 
       return null;
+
     } else if (typeof children === "string" && moment(children).isValid()) {
 
       return moment(children).format(format)

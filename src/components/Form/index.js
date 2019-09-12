@@ -7,16 +7,16 @@ import PropTypes from 'prop-types';
 
 class Form extends React.Component {
   static propTypes = {
-    offerAddress: PropTypes.string.isRequired,
-    hasLabel: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    offer: PropTypes.array.isRequired,
+    label: PropTypes.string.isRequired,
+    close: PropTypes.func.isRequired
   }
   constructor(props) {
     super(props)
     this.state = {
       values: {
-        hasName: "",
-        hasPhoneNo: "",
+        name: "",
+        phoneNo: "",
         isSubmited: false,
 
       }
@@ -42,32 +42,33 @@ class Form extends React.Component {
   }
 
   handleSubmit(e) {
+    const { close } = this.props;
     this.setState(
       { isSubmited: true }
     )
     alert('Twoje zgłoszenie zostało wysłane');
     e.preventDefault()
+    close();
   }
 
 
 
   render() {
-    const { hasName, hasPhoneNo } = this.state.values;
+    const { name, phoneNo } = this.state.values;
     const { isSubmited } = this.state;
-    const { offerAddress, hasLabel, onClick } = this.props;
-    console.log(onClick);
+    const { label, close, offer } = this.props;
+
     return (
       <div className={classnames("form-canvas", { "form-canvas--hiden": isSubmited })} >
         <div className="container">
           <form onSubmit={this.handleSubmit} className="form">
-            <span onClick={onClick}  >< FontAwesomeIcon icon={faTimes} /></span>
+            <span onClick={close}  >< FontAwesomeIcon icon={faTimes} /></span>
 
-            <h4>{hasLabel}   </h4>
+            <h4>{label}</h4>
 
-            <input type="text" name="hasName" placeholder="Imię i nazwisko" value={hasName} onChange={this.handleChange} required />
-            <input type="text" name="hasPhoneNo" placeholder="Nr telefonu" value={hasPhoneNo} required onChange={this.handleChange} />
-            <input type="text" name="hasOfferAddress" placeholder={offerAddress} readOnly />
-
+            <input type="text" name="name" placeholder="Imię i nazwisko" value={name} onChange={this.handleChange} required />
+            <input type="text" name="phoneNo" placeholder="Nr telefonu" value={phoneNo} required onChange={this.handleChange} />
+            <input type="text" name="offerAddress" placeholder={`ul. ${offer.street} ${offer.city}`} readOnly />
 
 
             <input type="submit" name="isSubmited" value="Wyślij" />

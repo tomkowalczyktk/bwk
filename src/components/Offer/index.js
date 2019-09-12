@@ -20,7 +20,7 @@ class Offer extends React.Component {
         social: PropTypes.bool.isRequired,
         street: PropTypes.string.isRequired,
         city: PropTypes.string.isRequired,
-        availableOn: PropTypes.string.isRequired,
+        availableOn: PropTypes.string,
         photos: PropTypes.array.isRequired
       })
   }
@@ -62,8 +62,9 @@ class Offer extends React.Component {
 
     const { id, area, street, city, internet, price, floor, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen, isFormDisplayed } = this.state;
-    const avalaibleDate = new Date(availableOn);
-    console.log(isFormDisplayed);
+
+    const { offer } = this.props;
+
     return (
       <div className="offer">
 
@@ -84,7 +85,7 @@ class Offer extends React.Component {
             <p>Szybki internet:<span>{internet ? "Tak" : "Nie"}</span></p>
             <p>Kącik socjalny:<span>{social ? "Tak" : "Nie"}</span></p>
             <p>Ilość biur w lokalu:<span>3</span></p>
-            <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{avalaibleDate}</DateFormater> rok</span></p>
+            {availableOn && <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{availableOn}</DateFormater> rok</span></p>}
           </div>
 
         </div>
@@ -93,7 +94,7 @@ class Offer extends React.Component {
 
         <RentButton text="wynajmij lokal" onClick={this.handleFormDisplay} />
 
-        {isFormDisplayed && <Form hasLabel="Zapytaj o ofertę" offerAddress={`ul. ${street} ${city}`} onClick={this.handleFormDisplay} />}
+        {isFormDisplayed && <Form label="Zapytaj o ofertę" offer={offer} close={this.handleFormDisplay} />}
 
       </div >
     );
@@ -102,3 +103,4 @@ class Offer extends React.Component {
 
 
 export default Offer;
+
