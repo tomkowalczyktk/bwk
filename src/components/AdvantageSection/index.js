@@ -4,7 +4,7 @@ import location from '../../images/icon-location.png';
 import aircon from '../../images/icon-aircon.png';
 import coffee from '../../images/icon-coffee.png';
 import internet from '../../images/icon-internet.png';
-import Advantage from '../Advantage';
+import Advantage from './Advantage';
 
 const AdvantageSection = () => {
   return (

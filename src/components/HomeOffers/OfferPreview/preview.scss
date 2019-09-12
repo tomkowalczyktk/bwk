@@ -5,62 +5,66 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  img {
-    cursor: pointer;
-    width: 100%;
-    max-height: auto;
-    z-index: 1001;
-    display: block;
-    object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .box {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  &__arrow-left {
-    position: absolute;
-    font-size: 120px;
-    cursor: pointer;
-    padding: 20px;
-    top: 50%;
-    left: 20px;
-    transform: translate(50%, -50%);
-    fill: white;
-    color: white;
-    filter: drop-shadow(0px 0px 6px black);
-    z-index: 1010;
-    &:hover {
-      filter: drop-shadow(0px 0px 10px black);
+    img {
+      cursor: pointer;
+      width: 100%;
+      max-height: auto;
+      z-index: 1001;
+      display: block;
+      object-fit: contain;
     }
-  }
-  &__arrow-right {
-    position: absolute;
-    font-size: 120px;
-    cursor: pointer;
-    padding: 20px;
-    top: 50%;
-    right: 20px;
-    transform: translate(-50%, -50%);
-    fill: white;
-    color: white;
-    filter: drop-shadow(0px 0px 6px black);
-    z-index: 1010;
-    &:hover {
-      filter: drop-shadow(0px 0px 10px black);
+    &__arrow-left {
+      position: absolute;
+      font-size: 120px;
+      cursor: pointer;
+      padding: 20px;
+      top: 50%;
+      left: 20px;
+      transform: translate(50%, -50%);
+      fill: white;
+      color: white;
+      filter: drop-shadow(0px 0px 6px black);
+      z-index: 1010;
+      &:hover {
+        filter: drop-shadow(0px 0px 10px black);
+      }
     }
-  }
-  &__close-button {
-    font-size: 100px;
-    position: absolute;
-    cursor: pointer;
-    padding: 20px;
-    top: 5%;
-    right: 50px;
-    color: white;
-    filter: drop-shadow(0px 0px 6px black);
-    z-index: 1010;
-    &:hover {
-      filter: drop-shadow(0px 0px 10px black);
+    &__arrow-right {
+      position: absolute;
+      font-size: 120px;
+      cursor: pointer;
+      padding: 20px;
+      top: 50%;
+      right: 20px;
+      transform: translate(-50%, -50%);
+      fill: white;
+      color: white;
+      filter: drop-shadow(0px 0px 6px black);
+      z-index: 1010;
+      &:hover {
+        filter: drop-shadow(0px 0px 10px black);
+      }
+    }
+    &__close-button {
+      font-size: 100px;
+      position: absolute;
+      cursor: pointer;
+      padding: 20px;
+      top: 5px;
+      right: 50px;
+      color: white;
+      filter: drop-shadow(0px 0px 6px black);
+      z-index: 1010;
+      &:hover {
+        filter: drop-shadow(0px 0px 10px black);
+      }
     }
   }
 }

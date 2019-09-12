@@ -4,7 +4,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 const ArrowRight = ({ onClick }) => {
   return (
     <div >
-      < FontAwesomeIcon icon={faChevronRight} className='preview-image__arrow-right' onClick={onClick} />
+      < FontAwesomeIcon icon={faChevronRight} className='box__arrow-right' onClick={onClick} />
 
     </div>
   );

@@ -6,7 +6,7 @@ const CloseButton = ({ onClick }) => {
   return (
     <div>
 
-      < FontAwesomeIcon icon={faTimes} className='preview-image__close-button' onClick={onClick} />
+      < FontAwesomeIcon icon={faTimes} className='box__close-button' onClick={onClick} />
     </div>
 
   )

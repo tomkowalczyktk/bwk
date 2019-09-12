@@ -20,12 +20,14 @@ class OfferPreview extends React.Component {
 
     return (
       <div className='preview-image'>
-        <img src={item.original} alt={item.title} onClick={onClick} />
+        <div className="box">
+          <img src={item.original} alt={item.title} onClick={onClick} />
 
-        {data.length > 1 && <ArrowLeft onClick={prev} />}
-        {data.length > 1 && <ArrowRight onClick={next} />}
-        <CloseButton onClick={onClick} />
+          {data.length > 1 && <ArrowLeft onClick={prev} />}
+          {data.length > 1 && <ArrowRight onClick={next} />}
+          <CloseButton onClick={onClick} />
 
+        </div>
       </div >
     )
   }

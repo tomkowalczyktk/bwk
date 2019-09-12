@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 
-const RentButton = ({ text, anchor }) => {
+const RentButton = ({ text, onClick }) => {
   return (
     <div className="rent-button-row">
-      <a className="rent-button" href={anchor}>
+      <span className="rent-button" href="#" onClick={onClick}>
         < FontAwesomeIcon icon={faKey} />
         {text}
-      </a>
+      </span>
     </div>
   );
 }
