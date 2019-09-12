@@ -25,4 +25,26 @@
       }
     }
   }
+  &--offers-page {
+    .home-offer-desctop {
+      &__row-details {
+        margin: 0;
+      }
+      &__image {
+        width: 40%;
+      }
+      &__details {
+        min-height: 300px;
+        margin: 0 90px;
+      }
+    }
+    &--even {
+      .home-offer-desctop {
+        background-color: lightgray;
+        &__row-details {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
 }

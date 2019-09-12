@@ -2,11 +2,12 @@ import React from 'react';
 import './footer.scss';
 import { Link } from 'gatsby';
 import { offers } from '../../source';
+import classnames from 'classnames'
 
-
-const Footer = () => {
+const Footer = ({ isLargeScreen }) => {
+  console.log("large", { isLargeScreen });
   return (
-    <footer className='footer'>
+    <footer className={classnames('footer', { 'footer--large-screen': isLargeScreen })}>
       <div className='container'>
         <div className='footer__directions'>
           <div className='footer__directions__shortcuts'>
