@@ -5,7 +5,6 @@ import { offers } from '../../source';
 import classnames from 'classnames'
 
 const Footer = ({ isLargeScreen }) => {
-  console.log("large", { isLargeScreen });
   return (
     <footer className={classnames('footer', { 'footer--large-screen': isLargeScreen })}>
       <div className='container'>
@@ -13,15 +12,15 @@ const Footer = ({ isLargeScreen }) => {
           <div className='footer__directions__shortcuts'>
             <h4>Na skróty</h4>
             <Link to="/oferty">Biura</Link>
-            <Link to='#advantages'>Korzyści</Link>
-            <Link to='#testimonials'>Referencje</Link>
+            <Link to='/#advantages'>Korzyści</Link>
+            <Link to='/#testimonials'>Referencje</Link>
             <Link to="#">Kontakt</Link>
           </div>
           <div className='footer__directions__docs'>
             <h4>Dokumenty</h4>
-            <Link to='../../components/documents/tenatcy-contract.txt'>Umowa najmu</Link>
-            <Link to='../../components/documents/statute.txt'>Regulamin</Link>
-            <Link to='../../components/documents/protocol-of-reception.txt'>Protokół odbioru</Link>
+            <a href='/documents/tenatcy-contract.txt' >Umowa najmu</a>
+            <a href='/documents/statute.txt'>Regulamin</a>
+            <a href='/documents/procol-of-reception.txt'>Protokół odbioru</a>
           </div>
           <div className='footer__directions__hot-offers'>
             <h4>Gorące oferty</h4>
