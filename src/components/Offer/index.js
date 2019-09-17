@@ -16,6 +16,7 @@ class Offer extends React.Component {
         area: PropTypes.string.isRequired,
         price: PropTypes.string.isRequired,
         floor: PropTypes.string.isRequired,
+        numOfOffices: PropTypes.string.isRequired,
         internet: PropTypes.bool.isRequired,
         social: PropTypes.bool.isRequired,
         street: PropTypes.string.isRequired,
@@ -60,7 +61,7 @@ class Offer extends React.Component {
 
   render() {
 
-    const { id, area, street, city, internet, price, floor, social, availableOn, photos } = this.props.offer;
+    const { id, area, street, city, internet, price, floor, numOfOffices, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen, isFormDisplayed } = this.state;
 
     const { offer } = this.props;
@@ -84,7 +85,7 @@ class Offer extends React.Component {
             <p>Piętro:<span>{floor}</span></p>
             <p>Szybki internet:<span>{internet ? "Tak" : "Nie"}</span></p>
             <p>Kącik socjalny:<span>{social ? "Tak" : "Nie"}</span></p>
-            <p>Ilość biur w lokalu:<span>3</span></p>
+            <p>Ilość biur w lokalu:<span>{numOfOffices}</span></p>
             {availableOn && <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{availableOn}</DateFormater> rok</span></p>}
           </div>
 

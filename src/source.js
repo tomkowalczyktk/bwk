@@ -26,6 +26,7 @@ exports.offers = [
     "area": "20",
     "price": "1300",
     "floor": "1",
+    "numOfOffices": 3,
     "internet": true,
     "social": true,
     "availableOn": "2019-11-23"
@@ -45,6 +46,7 @@ exports.offers = [
     "area": "21",
     "price": "1400",
     "floor": "1",
+    "numOfOffices": 3,
     "internet": true,
     "social": true,
     "availableOn": "2019-11-06"
@@ -65,6 +67,7 @@ exports.offers = [
     "area": "27",
     "price": "20000",
     "floor": "1",
+    "numOfOffices": 2,
     "internet": true,
     "social": true,
     "availableOn": "2019-10-21"
@@ -85,6 +88,85 @@ exports.offers = [
     "area": "21",
     "price": "1500",
     "floor": "1",
+    "numOfOffices": 3,
+    "internet": true,
+    "social": true,
+    "availableOn": "2019-10-16"
+
+  },
+  {
+    "id": 5,
+    "street": "Żołnierzy Niepodległej",
+    "city": "Lublin",
+    "mainPhoto": "/images/offers/5/zolnierzy_niepodleglej1.jpg",
+    "photos": [
+      {
+        "title": "office 1/1",
+        "original": "/images/offers/5/zolnierzy_niepodleglej1.jpg",
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej1.jpg'
+
+
+      },
+      {
+        "title": "office 1/2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej2.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej2.jpg'
+      },
+      {
+        "title": "office 1/3",
+        "original": '/images/offers/5/zolnierzy_niepodleglej3.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej3.jpg'
+      },
+      {
+        "title": "cheel-room 1",
+        "original": '/images/offers/5/zolnierzy_niepodleglej4.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej4.jpg'
+      },
+      {
+        "title": "cheel-room 2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej5.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej5.jpg'
+      },
+      {
+        "title": "cheel-room 3",
+        "original": '/images/offers/5/zolnierzy_niepodleglej9.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej9.jpg'
+      },
+      {
+        "title": "office 2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej6.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej6.jpg'
+      },
+      {
+        "title": "office 2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej10.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej10.jpg'
+      },
+      {
+        "title": "kitchen 1",
+        "original": '/images/offers/5/zolnierzy_niepodleglej7.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej7.jpg'
+      },
+      {
+        "title": "kitchen 2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej11.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej11.jpg'
+      },
+      {
+        "title": "hallway 1",
+        "original": '/images/offers/5/zolnierzy_niepodleglej8.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej8.jpg'
+      },
+      {
+        "title": "hallway 2",
+        "original": '/images/offers/5/zolnierzy_niepodleglej12.jpg',
+        "fullScreen": '/images/offers/5/fullScreenZolnierzy_niepodleglej12.jpg'
+      }
+    ],
+    "area": "60",
+    "price": "2500",
+    "floor": "1",
+    "numOfOffices": 2,
     "internet": true,
     "social": true,
     "availableOn": "2019-10-16"
