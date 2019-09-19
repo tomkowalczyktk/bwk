@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import OfferNavigationMobile from '../../OfferNavigationMobile';
 import './offer-mobile.scss';
 import withCarousell from '../../../hocComponents/withCarousell';
+import AmountFormater from '../../../AmountFormater';
 
 class OfferSliderMobile extends React.Component {
   static propTypes = {
@@ -21,7 +22,8 @@ class OfferSliderMobile extends React.Component {
         <div className='offer-mobile__img'>
           <Link to={`/oferta-${item.id}`}>
             <img src={item.photos[0].original} alt={item.photos.title} />
-            <div className='offer-mobile__price'><p>{item.price}zł</p></div>
+            <div className='offer-mobile__price'><p>
+              <AmountFormater>{item.price}</AmountFormater></p></div>
           </Link>
         </div>
         <p className='offer-mobile__description'>Powierzchnia: <span>{item.area}m<sup>2</sup></span></p>

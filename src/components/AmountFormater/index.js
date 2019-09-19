@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 export default class extends Component {
 
@@ -10,6 +9,7 @@ export default class extends Component {
     const formatter = new Intl.NumberFormat('POL', {
       style: 'currency',
       currency: 'PLN',
+      useGrouping: true,
     });
 
     if (typeof children === isNaN) {
