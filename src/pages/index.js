@@ -26,6 +26,7 @@ const IndexPage = () => (
       <HeaderButton
         image={keyImage}
         text='Wynajmij biuro'
+        link="/oferty"
       />
 
     </Header>

@@ -19,6 +19,7 @@
       z-index: 1001;
       display: block;
       object-fit: contain;
+      position: relative;
     }
     &__arrow-left {
       position: absolute;
@@ -57,7 +58,7 @@
       position: absolute;
       cursor: pointer;
       padding: 20px;
-      top: 5px;
+      top: 25px;
       right: 50px;
       color: white;
       filter: drop-shadow(0px 0px 6px black);

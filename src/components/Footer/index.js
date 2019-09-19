@@ -14,7 +14,7 @@ const Footer = ({ isLargeScreen }) => {
             <Link to="/oferty">Biura</Link>
             <Link to='/#advantages'>Korzyści</Link>
             <Link to='/#testimonials'>Referencje</Link>
-            <Link to="#">Kontakt</Link>
+
           </div>
           <div className='footer__directions__docs'>
             <h4>Dokumenty</h4>

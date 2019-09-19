@@ -67,27 +67,30 @@ class Header extends React.Component {
           )
         }
         >
-
-          <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
-
-
-            <Link to="/"><img src={isLargeScreen ? logo : logo_mobile} className="header__top__logo" alt="Logo" /></Link>
+          <div className="container-top">
+            <div className={classnames("header__top", { "header__top--menu-opened": displayMenu })}>
 
 
-            <div className="header__top__nav">
+              <Link to="/"><img src={isLargeScreen ? logo : logo_mobile} className="header__top__logo" alt="Logo" /></Link>
 
-              {displayMenu && <HeaderNavBar onClick={this.toggle} />}
 
-              < Burger onClick={this.toggle} />
+              <div className="header__top__nav">
+
+                {displayMenu && <HeaderNavBar onClick={this.toggle} />}
+
+                < Burger onClick={this.toggle} />
+
+              </div>
+
 
             </div>
+          </div>
+          <div className="container-children">
 
+
+            {children}
 
           </div>
-
-
-          {children}
-
 
         </div>
 
