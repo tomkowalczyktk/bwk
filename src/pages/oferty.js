@@ -33,6 +33,7 @@ class OffersPage extends React.Component {
 
   screenChange() {
     this.setState({
+
       isLargeScreen: window.innerWidth > 800
 
 
