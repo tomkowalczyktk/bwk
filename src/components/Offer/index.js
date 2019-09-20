@@ -61,7 +61,7 @@ class Offer extends React.Component {
 
   render() {
 
-    const { id, area, street, city, internet, price, floor, numOfOffices, social, availableOn, photos } = this.props.offer;
+    const { id, area, street, city, internet, price, net, floor, numOfOffices, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen, isFormDisplayed } = this.state;
 
     const { offer } = this.props;
@@ -75,7 +75,7 @@ class Offer extends React.Component {
 
           <div className="offer-details__column">
             <p>Powierzchnia:<span>{`${area}m`}<sup>2</sup></span></p>
-            <p>Cena:<span><AmountFormater>{price}</AmountFormater>netto</span></p>
+            <p>Cena:<span><AmountFormater>{price}</AmountFormater></span><span>{net ? "netto" : "brutto"}</span></p>
             <p>Ulica:<span>{street}</span></p>
             <p>Miasto:<span>{city}</span></p>
           </div>
