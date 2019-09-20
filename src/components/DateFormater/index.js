@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import moment from "moment";
 
-export default class DateFormater extends Component {
+export default class DateFormater extends React.Component {
 
   static defaultProps = {
     format: "YYYY-MM-DD",

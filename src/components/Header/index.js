@@ -8,6 +8,7 @@ import './header.scss';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
+
 class Header extends React.Component {
   static propTypes = {
     isOfferPage: PropTypes.bool.isRequired,
@@ -63,6 +64,7 @@ class Header extends React.Component {
         style={bgImg && { backgroundImage: `url(${bgImg})` }
         }
       >
+
         <div className={
           classnames(
             "container container--header",

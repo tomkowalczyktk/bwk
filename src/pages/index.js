@@ -13,7 +13,9 @@ import HomeOffers from '../components/HomeOffers';
 
 
 const IndexPage = () => (
+
   < main >
+
     <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
 
 

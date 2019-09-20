@@ -1,6 +1,6 @@
 import React from 'react';
 import './textbox.scss';
-import PropTypes, { bool, number, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import AmountFormater from '../../AmountFormater';
 
 export default class OfferDetail extends React.Component {
@@ -11,7 +11,7 @@ export default class OfferDetail extends React.Component {
     PropTypes.string
     ]).isRequired,
     unit: PropTypes.string,
-    net: PropTypes.bool.isRequired
+    net: PropTypes.bool
 
   }
   render() {
