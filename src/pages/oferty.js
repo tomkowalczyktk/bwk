@@ -10,6 +10,7 @@ import OfferDetails from '../components/HomeOffers/OfferDetails';
 import Footer from '../components/Footer';
 import classnames from 'classnames';
 import OfferBtn from '../components/Offers/OfferBtn';
+import { Link } from '@reach/router';
 
 class OffersPage extends React.Component {
   constructor(props) {
@@ -64,12 +65,12 @@ class OffersPage extends React.Component {
 
 
                   <div className='home-offer-desctop__row-details'>
-
-                    <div className='home-offer-desctop__image'>
+                    <Link to={`/oferta-${offer.id}`}
+                      className='home-offer-desctop__image'>
 
                       <OfferSlider item={offer} />
 
-                    </div>
+                    </Link>
 
                     <div className='home-offer-desctop__details'>
                       <div className='home-offer-desctop__details__frame'>

@@ -23,6 +23,7 @@ export default class OfferDetails extends React.Component {
           label="Cena"
           value={item.price}
           unit="zł"
+          net={item.net}
         />
         <OfferDetail
           label="Ulica"

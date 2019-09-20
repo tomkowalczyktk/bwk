@@ -10,18 +10,19 @@ export default class OfferDetail extends React.Component {
     PropTypes.number,
     PropTypes.string
     ]).isRequired,
-    unit: PropTypes.string
+    unit: PropTypes.string,
+    net: PropTypes.bool.isRequired
 
   }
   render() {
-    const { label, value, unit } = this.props;
+    const { label, value, unit, net } = this.props;
     let valueDisplayed;
     switch (unit) {
       case "m2":
         valueDisplayed = <span>{value}m<sup>2</sup></span>;
         break;
       case "zł":
-        valueDisplayed = <span><AmountFormater>{value}</AmountFormater></span>;
+        valueDisplayed = <span><AmountFormater>{value}</AmountFormater><span>{net ? "netto" : "brutto"}</span></span>;
         break;
       case "boolean":
         valueDisplayed = <span> {true ? "TAK" : "NIE"}</span>;

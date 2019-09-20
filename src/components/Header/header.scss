@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   background-image: url("../../images/header_background_image_home.png");
-
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -13,7 +12,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 450px;
+    min-height: 470px;
 
     &--offer-page {
       height: 400px;

@@ -57,7 +57,6 @@ class Header extends React.Component {
   render() {
     const { displayMenu, isLargeScreen } = this.state;
     const { children, isOfferPage, bgImg } = this.props;
-    console.log("path", { bgImg });
 
     return (
       <header className="header"

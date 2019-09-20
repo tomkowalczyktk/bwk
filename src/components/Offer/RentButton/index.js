@@ -7,7 +7,7 @@ import { faKey } from '@fortawesome/free-solid-svg-icons';
 const RentButton = ({ text, onClick }) => {
   return (
     <div className="rent-button-row">
-      <span className="rent-button" href="#" onClick={onClick}>
+      <span className="rent-button" onClick={onClick}>
         < FontAwesomeIcon icon={faKey} />
         {text}
       </span>
