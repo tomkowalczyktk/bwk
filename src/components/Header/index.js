@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 
 class Header extends React.Component {
   static propTypes = {
-    isOfferPage: PropTypes.bool.isRequired
+    isOfferPage: PropTypes.bool.isRequired,
+    bgImg: PropTypes.string
   }
   constructor(props) {
     super(props)
@@ -55,10 +56,14 @@ class Header extends React.Component {
 
   render() {
     const { displayMenu, isLargeScreen } = this.state;
-    const { children, isOfferPage } = this.props;
+    const { children, isOfferPage, bgImg } = this.props;
+    console.log("path", { bgImg });
 
     return (
-      <header className="header">
+      <header className="header"
+        style={bgImg && { backgroundImage: `url(${bgImg})` }
+        }
+      >
         <div className={
           classnames(
             "container container--header",

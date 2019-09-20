@@ -7,7 +7,6 @@ import Offer from '../components/Offer';
 import 'scss/bwk.scss';
 import '../components/Headline/headline.scss';
 import Footer from '../components/Footer';
-import { offers } from '../source';
 import OfferFooter from '../components/Offer/OfferFooter';
 
 
@@ -16,7 +15,7 @@ export default ({ pageContext: { offer } }) => (
 
 
   <main>
-    <Header isOfferPage={true}>
+    <Header isOfferPage={true} bgImg={offer.mainPhoto}>
 
       <HeaderHeadline
         text="Szczegóły oferty"
