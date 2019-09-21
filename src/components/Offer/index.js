@@ -38,7 +38,6 @@ class Offer extends React.Component {
     this.handleFormDisplay = this.handleFormDisplay.bind(this);
   }
 
-
   componentDidMount() {
     this.screenChange();
     window.addEventListener("resize", this.screenChange);
