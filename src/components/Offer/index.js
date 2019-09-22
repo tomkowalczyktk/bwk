@@ -89,8 +89,9 @@ class Offer extends React.Component {
             {availableOn && <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{availableOn}</DateFormater> rok</span></p>}
           </div>
 
-        </div>
-        {isLargeScreen && <GalleryDesktop photos={photos} />}
+        </div >
+
+        {isLargeScreen && <GalleryDesktop photos={photos} id={`gallery-${id}`} />}
 
 
         <RentButton text="wynajmij lokal" onClick={this.handleFormDisplay} />

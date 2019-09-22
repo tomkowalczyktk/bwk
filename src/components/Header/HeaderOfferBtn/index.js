@@ -5,7 +5,7 @@ import './header-offer-btn.scss';
 const HeaderOfferBtn = ({ text }) => {
   return (
     <div className="header-offer-btn-row">
-      <div className="header-offer-btn" to="#offers">
+      <div className="header-offer-btn" >
         {text}
       </div>
     </div>

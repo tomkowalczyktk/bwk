@@ -8,6 +8,7 @@ import 'scss/bwk.scss';
 import '../components/Headline/headline.scss';
 import Footer from '../components/Footer';
 import OfferFooter from '../components/Offer/OfferFooter';
+import { Link } from '@reach/router';
 
 
 
@@ -21,16 +22,18 @@ export default ({ pageContext: { offer } }) => (
         text="Szczegóły oferty"
         isOfferPage={true}
       />
-      <HeaderOfferBtn
-        text='Zobacz zdjęcia'
-      />
+      <Link to={`/oferta-${offer.id}/#gallery-${offer.id}`}>
+        <HeaderOfferBtn
+          text='Zobacz zdjęcia'
+        />
+      </Link>
 
     </Header >
     <Headline
       title={`Lokal przy: ${offer.street}`}
       isOfferPage={true}
     />
-    <div className='container'>
+    <div className='container'  >
       <Offer offer={offer} />
     </div>
 
@@ -42,7 +45,7 @@ export default ({ pageContext: { offer } }) => (
       <Footer />
     </div>
 
-  </main>
+  </main >
 
 
 );

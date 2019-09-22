@@ -1,5 +1,4 @@
 import React from 'react';
-import SpinnerService from '../Spinner/SpinnerService';
 export class SpinnerComponent extends React.Component {
 
   constructor(props, context) {
