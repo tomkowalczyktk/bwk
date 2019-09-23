@@ -10,12 +10,14 @@ export default class Preloader extends React.Component {
   componentDidMount() {
     const { images } = this.props;
 
-    images.forEach((image) => {
-      const imageSrc = new Image(image);
+    images.forEach((src) => {
+      const image = new Image();
+      image.src = src;
+
     });
   }
   render() {
-    return (
-      null);
+
+    return null;
   }
 }
