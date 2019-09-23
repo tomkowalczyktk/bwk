@@ -64,3 +64,55 @@
     margin: 0 0 10px auto;
   }
 }
+.offer-btn {
+  width: 60%;
+  margin: 20px 0 10px 0;
+
+  &--mobile {
+    width: 100%;
+    @media all and (max-width: 570px) {
+      a {
+        font-size: 18px;
+      }
+    }
+    @media all and (max-width: 530px) {
+      a {
+        font-size: 15px;
+        svg {
+          width: 20px;
+          height: 20px;
+          margin: 0 5px 4px 0;
+        }
+      }
+    }
+    @media all and (max-width: 450px) {
+      a {
+        font-size: 14px;
+        svg {
+          width: 18px;
+          height: 18px;
+          margin: 0 5px 3px 0;
+        }
+      }
+    }
+    @media all and (max-width: 420px) {
+      a {
+        font-size: 12px;
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    @media all and (max-width: 390px) {
+      a {
+        font-size: 10px;
+        svg {
+          width: 12px;
+          height: 12px;
+          margin: 0 5px 3px 0;
+        }
+      }
+    }
+  }
+}

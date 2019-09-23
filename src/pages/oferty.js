@@ -9,7 +9,8 @@ import OffersPageOfferMobile from '../components/Offers/OffersPageOfferMobile';
 import OfferDetails from '../components/HomeOffers/OfferDetails';
 import Footer from '../components/Footer';
 import classnames from 'classnames';
-import OfferBtn from '../components/Offers/OfferBtn';
+// import OfferBtn from '../components/Offers/OfferBtn';
+import ButtonSeeMore from '../components/ButtonSeeMore';
 import { Link } from '@reach/router';
 
 class OffersPage extends React.Component {
@@ -78,7 +79,10 @@ class OffersPage extends React.Component {
                         <OfferDetails item={offer} />
 
                       </div>
-                      <OfferBtn offer={offer} />
+                      {/* <OfferBtn offer={offer} /> */}
+                      <div className='home-offer-desctop__button'>
+                        <ButtonSeeMore to={`/oferta-${offer.id}`} />
+                      </div>
                     </div>
 
                   </div>

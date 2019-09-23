@@ -6,6 +6,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import withCarousell from '../../hocComponents/withCarousell';
+import Preloader from '../../Preloader';
 
 class OfferGalleryMobile extends React.Component {
   static propTypes = {
@@ -19,9 +20,9 @@ class OfferGalleryMobile extends React.Component {
     const { data, item, prev, next } = this.props;
 
 
-
     return (
       <div className='offer-gallery-mobile'>
+        <Preloader images={data.map(photo => (photo.original))} />
         <div className='offer-gallery-mobile__img'>
           <img src={item.original} alt={item.title} />
         </div>

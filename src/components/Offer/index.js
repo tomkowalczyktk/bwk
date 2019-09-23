@@ -64,6 +64,7 @@ class Offer extends React.Component {
     const { id, area, street, city, internet, price, net, floor, numOfOffices, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen, isFormDisplayed } = this.state;
 
+
     const { offer } = this.props;
 
     return (
