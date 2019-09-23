@@ -10,7 +10,7 @@ import Testimonials from '../components/Testimonials';
 import { testimonials, offers } from '../source';
 import Footer from '../components/Footer';
 import HomeOffers from '../components/HomeOffers';
-import LoadingSpinner from '../components/LoadingSpinner';
+
 
 const IndexPage = () => (
 
@@ -32,7 +32,6 @@ const IndexPage = () => (
       />
 
     </Header>
-    <LoadingSpinner />
 
     <div className='container' id="advantages">
       <Headline title="Korzyści" />
