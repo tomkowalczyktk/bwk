@@ -16,7 +16,7 @@ export default ({ pageContext: { offer } }) => (
 
 
   <main>
-    {/* <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link> */}
+    <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
 
     <Header isOfferPage={true} bgImg={offer.mainPhoto}>
 

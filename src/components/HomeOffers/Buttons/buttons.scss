@@ -1,7 +1,7 @@
 .buttons-row {
   display: flex;
   justify-items: center;
-  align-items: center;
+  align-items: inherit;
   justify-content: center;
   &__element {
     border-bottom: 2px solid black;
