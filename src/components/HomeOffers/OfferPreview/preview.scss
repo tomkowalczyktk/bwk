@@ -12,15 +12,17 @@
   align-content: center;
   justify-items: center;
   align-items: center;
-
+}
+.preview-image__container {
+  width: 100%;
+  position: relative;
   img {
     cursor: pointer;
     width: 100%;
-    max-height: auto;
+    max-height: 100vh;
     z-index: 1001;
     display: block;
     object-fit: cover;
-    position: relative;
   }
   &__arrow-left {
     position: absolute;
@@ -56,7 +58,7 @@
   }
   &__close-button {
     font-size: 100px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     padding: 20px;
     top: 25px;

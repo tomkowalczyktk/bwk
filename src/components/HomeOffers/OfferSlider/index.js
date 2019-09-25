@@ -38,10 +38,14 @@ class OfferSlider extends Component {
           title={item.photos[0].title}
           onClick={this.previewToggle} />
 
-        {isFullScreen && <OfferPreview
-          data={item.photos}
-          onClick={this.previewToggle}
-        />}
+        {isFullScreen && <div>
+          <Preloader images={item.photos.map(photo => (photo.original))} />
+
+          <OfferPreview
+            data={item.photos}
+            onClick={this.previewToggle}
+          />
+        </div>}
       </React.Fragment>
     )
   }
