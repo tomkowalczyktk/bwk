@@ -47,7 +47,7 @@ class OffersPage extends React.Component {
     return (
       <main>
 
-        <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
+        {/* <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link> */}
 
         <Header isOfferPage={true}>
           <HeaderHeadline
