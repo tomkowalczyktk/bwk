@@ -1,5 +1,6 @@
 import React from 'react';
 import './offer.scss';
+import 'scss/bwk.scss';
 import GalleryDesktop from './GalleryDesktop';
 import RentButton from './RentButton';
 import PropTypes from 'prop-types';

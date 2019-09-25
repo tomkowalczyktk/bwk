@@ -8,7 +8,7 @@ import 'scss/bwk.scss';
 import '../components/Headline/headline.scss';
 import Footer from '../components/Footer';
 import OfferFooter from '../components/Offer/OfferFooter';
-import { Link } from '@reach/router';
+import { Link } from 'gatsby';
 
 
 
@@ -16,6 +16,8 @@ export default ({ pageContext: { offer } }) => (
 
 
   <main>
+    <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
+
     <Header isOfferPage={true} bgImg={offer.mainPhoto}>
 
       <HeaderHeadline

@@ -1,5 +1,5 @@
 import React from 'react';
-import 'scss/bwk.scss'
+import './../scss/bwk.scss'
 import Header from '../components/Header';
 import HeaderHeadline from '../components/HeaderHeadline';
 import HeaderButton from '../components/HeaderButton';
