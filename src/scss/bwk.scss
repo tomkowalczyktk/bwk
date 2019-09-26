@@ -1,10 +1,14 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
-
+@font-face {
+  font-family: "benton-sans";
+  font-display: auto;
+  src: url(../fonts/BentonSansLight.ttf);
+}
 html,
 body {
   height: 100%;
   width: 100%;
-  font-family: benton-sans;
+  font-family: "benton-sans";
 }
 .container {
   margin: auto;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import HeaderHeadline from '../components/HeaderHeadline';
-import 'scss/bwk.scss'
+import './../scss/bwk.scss'
 import { offers } from '../source';
 import Buttons from '../components/HomeOffers/Buttons';
 import OfferSlider from '../components/HomeOffers/OfferSlider';
@@ -9,7 +9,7 @@ import OffersPageOfferMobile from '../components/Offers/OffersPageOfferMobile';
 import OfferDetails from '../components/HomeOffers/OfferDetails';
 import Footer from '../components/Footer';
 import classnames from 'classnames';
-import OfferBtn from '../components/Offers/OfferBtn';
+import ButtonSeeMore from '../components/ButtonSeeMore';
 import { Link } from '@reach/router';
 
 class OffersPage extends React.Component {
@@ -46,6 +46,9 @@ class OffersPage extends React.Component {
 
     return (
       <main>
+
+        <link rel="stylesheet" href="https://use.typekit.net/fdm4ytj.css"></link>
+
         <Header isOfferPage={true}>
           <HeaderHeadline
             text="Biura"
@@ -78,7 +81,10 @@ class OffersPage extends React.Component {
                         <OfferDetails item={offer} />
 
                       </div>
-                      <OfferBtn offer={offer} />
+                      {/* <OfferBtn offer={offer} /> */}
+                      <div className='home-offer-desctop__button'>
+                        <ButtonSeeMore to={`/oferta-${offer.id}`} />
+                      </div>
                     </div>
 
                   </div>

@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby'
 import './offers-page-offer-mobile.scss';
-import OfferBtn from '../OfferBtn';
+// import OfferBtn from '../OfferBtn';
 import classnames from 'classnames';
 import AmountFormater from '../../AmountFormater';
+import ButtonSeeMore from '../../ButtonSeeMore';
 
 class OffersPageOfferMobile extends React.Component {
   static propTypes = {
@@ -31,7 +32,11 @@ class OffersPageOfferMobile extends React.Component {
             <p className='offer-mobile__description'>Miasto: <span>{item.city}</span></p>
           </div>
           <div className="bottom-btn">
-            <OfferBtn offer={item} mobile={true} />
+
+
+            <div className=' offer-btn  offer-btn--mobile'>
+              <ButtonSeeMore to={`/oferta-${item.id}`} />
+            </div>
           </div>
         </div>
       </div>

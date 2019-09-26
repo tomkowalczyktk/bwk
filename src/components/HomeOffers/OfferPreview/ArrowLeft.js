@@ -7,8 +7,7 @@ const ArrowLeft = ({ onClick }) => {
 
 
     <div>
-
-      < FontAwesomeIcon icon={faChevronLeft} className='preview-image__arrow-left' onClick={onClick} />
+      < FontAwesomeIcon icon={faChevronLeft} className='preview-image__container__arrow-left' onClick={onClick} />
     </div>
 
 

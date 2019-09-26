@@ -1,5 +1,6 @@
 import React from 'react';
 import './offer.scss';
+import 'scss/bwk.scss';
 import GalleryDesktop from './GalleryDesktop';
 import RentButton from './RentButton';
 import PropTypes from 'prop-types';
@@ -64,6 +65,7 @@ class Offer extends React.Component {
     const { id, area, street, city, internet, price, net, floor, numOfOffices, social, availableOn, photos } = this.props.offer;
     const { isLargeScreen, isFormDisplayed } = this.state;
 
+
     const { offer } = this.props;
 
     return (
@@ -89,8 +91,9 @@ class Offer extends React.Component {
             {availableOn && <p>Dostępny od:<span><DateFormater format="DD.MM.YYYY">{availableOn}</DateFormater> rok</span></p>}
           </div>
 
-        </div>
-        {isLargeScreen && <GalleryDesktop photos={photos} />}
+        </div >
+
+        {isLargeScreen && <GalleryDesktop photos={photos} id={`gallery-${id}`} />}
 
 
         <RentButton text="wynajmij lokal" onClick={this.handleFormDisplay} />

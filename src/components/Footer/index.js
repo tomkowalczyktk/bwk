@@ -20,7 +20,7 @@ const Footer = ({ isLargeScreen }) => {
             <h4>Dokumenty</h4>
             <a href='/documents/tenatcy-contract.txt' >Umowa najmu</a>
             <a href='/documents/statute.txt'>Regulamin</a>
-            <a href='/documents/procol-of-reception.txt'>Protokół odbioru</a>
+            <a href='/documents/protocol-of-reception.txt'>Protokół odbioru</a>
           </div>
           <div className='footer__directions__hot-offers'>
             <h4>Gorące oferty</h4>

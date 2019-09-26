@@ -8,6 +8,7 @@ import Buttons from './Buttons';
 import NavigationBottom from './NavigationBottom';
 import PropTypes from 'prop-types';
 import withCarousell from '../hocComponents/withCarousell';
+import Preloader from '../Preloader';
 
 
 class HomeOffers extends React.Component {
@@ -49,7 +50,6 @@ class HomeOffers extends React.Component {
 
     const { data, item, prev, next, index } = this.props;
     const { isLargeScreen } = this.state
-
     return (
       <React.Fragment>
 
@@ -62,6 +62,7 @@ class HomeOffers extends React.Component {
             <div className='home-offer-desctop__row-details'>
 
               <div className='home-offer-desctop__image'>
+                <Preloader images={item.photos.map(photo => (photo.original))} />
 
                 <OfferSlider item={item}
                 />
@@ -70,6 +71,7 @@ class HomeOffers extends React.Component {
 
               <div className='home-offer-desctop__details'>
                 <div className='home-offer-desctop__details__frame'>
+                  <Preloader images={data.map(set => (set.mainPhoto))} />
                   <OfferNavigationControls
                     data={data}
                     prev={prev}
@@ -88,11 +90,14 @@ class HomeOffers extends React.Component {
           </div>
 
         </div>}
-        {!isLargeScreen && <div className='home-offers'>
-          <OfferSliderMobile
-            data={data} />
-        </div>}
-      </React.Fragment>
+        {
+          !isLargeScreen && <div className='home-offers'>
+            <Preloader images={data.map(set => (set.mainPhoto))} />
+            <OfferSliderMobile
+              data={data} />
+          </div>
+        }
+      </React.Fragment >
 
     );
   }

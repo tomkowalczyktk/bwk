@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import OfferThumbnail from '../OfferThumbnail';
 import OfferPreview from '../OfferPreview';
+import Preloader from '../../Preloader';
 
 class OfferSlider extends Component {
   static propTypes = {
@@ -31,15 +32,20 @@ class OfferSlider extends Component {
 
     return (
       <React.Fragment>
+        <Preloader images={item.photos.map(photo => (photo.original))} />
         <OfferThumbnail
           src={item.photos[0].original}
           title={item.photos[0].title}
           onClick={this.previewToggle} />
 
-        {isFullScreen && <OfferPreview
-          data={item.photos}
-          onClick={this.previewToggle}
-        />}
+        {isFullScreen && <div>
+          <Preloader images={item.photos.map(photo => (photo.original))} />
+
+          <OfferPreview
+            data={item.photos}
+            onClick={this.previewToggle}
+          />
+        </div>}
       </React.Fragment>
     )
   }
