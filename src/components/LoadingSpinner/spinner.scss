@@ -23,6 +23,7 @@
       border-radius: 50%;
       border: 2px dashed black;
       animation: mymove 5s infinite linear;
+
       @keyframes mymove {
         0% {
           transform: rotate(0deg) scale(1);
