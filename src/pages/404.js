@@ -4,17 +4,20 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSadCry } from '@fortawesome/free-solid-svg-icons';
+import '../scss/bwk.scss'
 
 
-
-const Main = styled.main`
-margin:0;
+const Main = styled.html`
+margin:0 0 0 0;
+display:flex;
+flex-direction:column;
 background-color: black;
-height: 100vh;
+height: 100%;
 width: 100%;
 `
 
 const H1 = styled.h1`
+display:block;
 color:red;
 font-weight:800;
 opacity:.4;
@@ -25,7 +28,6 @@ position:relative;
   content:'Nie znaleziono takiej strony!!!';
   position:absolute;
   top:2px;
-  margin-left:2px;
   color:rgba(0 0 0 .4);
 }
 `
