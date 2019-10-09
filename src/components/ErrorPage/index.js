@@ -7,9 +7,9 @@ const ErrorPage = () => {
     <div className="background404">
 
 
-      <h1>Nie znaleziono takiej strony!!!</h1>
+      <h1 className="message404">Nie znaleziono takiej strony!!!</h1>
       <div className="logo404"></div>
-      <Link to='/' > Zabierz mnie do strony głównej.</Link>
+      <Link to='/' className="link-from404"> Zabierz mnie do strony głównej.</Link>
 
     </div>
   )

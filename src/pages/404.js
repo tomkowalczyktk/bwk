@@ -4,7 +4,7 @@ import ErrorPage from '../components/ErrorPage';
 
 
 const NotFoundPage = () => {
-  alert("what's going on!!!");
+
   return (
     <main>
       <ErrorPage />
