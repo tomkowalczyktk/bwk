@@ -52,7 +52,6 @@ class Form extends React.Component {
   }
 
 
-
   render() {
     const { name, phoneNo } = this.state.values;
     const { isSubmited } = this.state;
@@ -60,8 +59,11 @@ class Form extends React.Component {
 
     return (
       <div className={classnames("form-canvas", { "form-canvas--hiden": isSubmited })} >
+
+        
+ 
         <div className="container">
-          <form onSubmit={this.handleSubmit} className="form">
+          <form onSubmit={this.handleSubmit} className="form" action="/oferty" method="POST">
             <span onClick={close}  >< FontAwesomeIcon icon={faTimes} /></span>
 
             <h4>{label}</h4>
@@ -82,3 +84,43 @@ class Form extends React.Component {
 
 }
 export default Form;
+{/* <script type='text-php'>
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if(isset($_POST['name'])) {
+    $name = $_POST['name'];
+  } else {
+    $name = '';
+  }
+  if(isset($_POST['phoneNo'])){
+    $phoneNo=$_POST['phoneNo'];
+  }else{
+    $phoneNo='';
+  }
+  if(isset($_POST['offerAddress'])){
+    $offerAddress=$_POST['offerAddress'];
+  }else{
+    $offerAddress='';
+  }
+
+  
+
+
+  require '../../data/rents.json';  
+  $rent=array(
+  'name'=> $name,
+  'phoneNo'=> $phoneNo,
+  'offerAddress'=> $offerAddress,
+  );
+  $rentsJSON=file_get_contents('../../data/rents');
+  $rents=json_decode($rentsJSON,true);
+  $rents[]=$rent;
+
+  $json = json_encode($rents, JSON_PRETTY_PRINT);
+  file_put_contents('../../data/rents.json', $json);
+
+  header('location:/');
+}
+
+</script> */}
